@@ -1,0 +1,163 @@
+﻿<Window x:Class="GameCenter.Projects.Project1.Project1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameCenter.Projects.Project1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="mainContainer" Grid.Row="0">
+            <Label x:Name="MainTitle"
+                Content="Users Manager" 
+                HorizontalContentAlignment="Center" 
+                Background="AliceBlue"
+                FontWeight="Bold"
+                FontSize="23"
+            />
+            <StackPanel x:Name="addUserPanel" Width="300" >
+                <StackPanel x:Name="userNamePanel">
+                    <Label Content="user Name" />
+                    <TextBox 
+                        x:Name="UserName" 
+                        BorderThickness="1,1,1,2"
+                        Height="25" LostFocus="On_UserName_LostFocus"
+                    >
+                        <TextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel x:Name="userEmailPanel" Margin="0,10,0,0">
+                    <Label Content="user Email" />
+                    <TextBox 
+                        x:Name="UserEmail" 
+                        BorderThickness="1,1,1,2" 
+                        Height="25"
+                        LostFocus="On_UserEmail_LostFocus">
+                        <TextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Button 
+                        x:Name="AddButton"
+                        Content="Add"
+                        Width="80"
+                        Height="30"
+                        BorderThickness="0"
+                        Background= "#FF88D289"
+                        Margin="10,30,20,30" Click="On_Add_Button_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button 
+                        x:Name="RemoveButton"
+                        Content="Remove"
+                        BorderThickness="0"
+                        Width="80"
+                        Margin="0,30,0,30" Click="On_Remove_Button_Click" Background="#FFD26B6B">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button 
+                        x:Name="UpdateButton"
+                        Content="Update"
+                        BorderThickness="0"
+                        Width="80"
+                        Margin="20,30,0,30" Background="#FF67A6E0" Click="On_Update_Button_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </WrapPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Button 
+                        x:Name="LogButton"
+                        Content="Login/out"
+                        BorderThickness="0"
+                        Width="80"
+                        Margin="10,0,20,30" Background="#FF88D289" Click="On_ToggleUserLog_Button_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button 
+                        x:Name="FreezeButton"
+                        Content="Freeze/Un-Freeze"
+                        Height="30"
+                        BorderThickness="0"
+                        Background= "#FFD26B6B"
+                        Margin="0,0,0,30" Click="On_ToogleFreezeUser_Button_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </WrapPanel>
+            </StackPanel>
+            <StackPanel x:Name="usersListContainer">
+                <Label x:Name="usersListTitle"
+                    Content="Users LIst" 
+                    HorizontalContentAlignment="Center" 
+                    Background="AliceBlue"
+                    FontWeight="Bold"
+                    FontSize="23"
+                />
+                <DataGrid 
+                    x:Name="UsersDataGrid"
+                    HorizontalAlignment="Center"
+                    Margin="0,30,0,0"
+                    ColumnWidth="100"
+                    CanUserAddRows="False"
+                    HeadersVisibility="Column"
+                    ScrollViewer.CanContentScroll="True"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                    MaxHeight="200" 
+                    SelectionChanged="On_UsersDataGrid_SelectionChanged"
+                    IsReadOnly="True"
+                >
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#FF3B74A5"/>
+                            <Setter Property="Foreground" Value="#FFE3E7EC"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="Height" Value="25"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                </DataGrid>
+            </StackPanel>
+        </StackPanel>
+        <Label 
+            x:Name="Footer"
+            VerticalContentAlignment="Center"
+            Grid.Row="1"
+            Content="all rights reserved to me (c)" 
+            HorizontalContentAlignment="Center" 
+            Background="AliceBlue"
+            FontWeight="Bold"
+            FontSize="12"
+            />
+
+    </Grid>
+</Window>

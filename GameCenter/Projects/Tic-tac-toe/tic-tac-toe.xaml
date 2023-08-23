@@ -8,23 +8,25 @@
         Title="tic_tac_toe" Height="450" Width="800">
     <Grid x:Name="MainGrid">
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition Height="144.68" />
+            <RowDefinition />
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Row="0" Grid.Column="0" Click="Button_Click" FontSize="24"/>
-        <Button Grid.Row="0" Grid.Column="1" Click="Button_Click" FontSize="24"/>
-        <Button Grid.Row="0" Grid.Column="2" Click="Button_Click" FontSize="24"/>
-        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click" FontSize="24"/>
-        <Button Grid.Row="1" Grid.Column="1" Click="Button_Click" FontSize="24"/>
-        <Button Grid.Row="1" Grid.Column="2" Click="Button_Click" FontSize="24"/>
-        <Button Grid.Row="2" Grid.Column="0" Click="Button_Click" FontSize="24"/>
-        <Button Grid.Row="2" Grid.Column="1" Click="Button_Click" FontSize="24"/>
-        <Button Grid.Row="2" Grid.Column="2" Click="Button_Click" FontSize="24"/>
+        <Button Grid.Row="0" Grid.Column="0" Click="Button_Click" FontSize="90"  />
+        <Button Grid.Row="0" Grid.Column="1" Click="Button_Click" FontSize="90"/>
+        <Button Grid.Row="0" Grid.Column="2" Click="Button_Click" FontSize="90" />
+        <Button Grid.Row="1" Grid.Column="0" Click="Button_Click" FontSize="90"/>
+        <Button Grid.Row="1" Grid.Column="1" Click="Button_Click" FontSize="90" />
+        <Button Grid.Row="1" Grid.Column="2" Click="Button_Click" FontSize="90" />
+        <Button Grid.Row="2" Grid.Column="0" Click="Button_Click" FontSize="90" />
+        <Button Grid.Row="2" Grid.Column="1" Click="Button_Click" FontSize="90" />
+        <Button Grid.Row="2" Grid.Column="2" Click="Button_Click" FontSize="90" />
+
     </Grid>
 </Window>

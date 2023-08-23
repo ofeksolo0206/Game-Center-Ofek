@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Threading;
-using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Threading;
 
 namespace GameCenter.Projects.SaimonGame
 {
@@ -25,131 +25,157 @@ namespace GameCenter.Projects.SaimonGame
         int record;
         Random random = new Random();
         bool talk = false;
-        List<int> CurrentSequence;
+        List<double> CurrentSequence;
 
         public SaimonGame()
         {
             random = new Random();
-            CurrentSequence = new List<int>();
+            CurrentSequence = new List<double>();
             InitializeComponent();
+        }
+        private void startGame_Click(object sender, RoutedEventArgs e)
+        {
+            Score.Text = "Score: " + scoreCount;
+            CurrentSequence.Add(random.Next(0,4));
+            Simon_Talk();
+            scoreCount = 0;
+        }
+
+        private void GameOver()
+        {
+            MessageBoxResult result = MessageBox.Show("Game Over! Would you like to play again?", "Game Over", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                scoreCount = 0;
+                Score.Text = "Score: " + scoreCount;
+                CurrentSequence.Clear();
+                Red_0.Opacity = 1;
+                Yellow_1.Opacity = 1;
+                Blue_2.Opacity = 1;
+                Green_3.Opacity = 1;
+
+            }
+            if (result == MessageBoxResult.No)
+            {
+                Close();
+            }
         }
 
         private void Simon_Talk()
         {
+            var timer1 = new DispatcherTimer { Interval = TimeSpan.FromSeconds(0.4) };
+            var timer2 = new DispatcherTimer { Interval = TimeSpan.FromSeconds(CurrentSequence.Count / 10 + 0.8) };
             talk = true;
-            Thread.Sleep(150);
 
-            foreach(int i in CurrentSequence)
+            foreach (int i in CurrentSequence)
             {
-                switch(i)
+                switch (i)
                 {
                     case 0:
-                            Red_0.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\R2.png"));
-                            Thread.Sleep(150);
-                            Red_0.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\R1.png"));
+                        timer1.Start();
+                        timer1.Tick += (sender, args) =>
+                        {
+                            Red_0.Opacity = 0.5;
+                            timer1.Stop();
+                        };
+                        timer2.Start();
+                        timer2.Tick += (sender, args) =>
+                        {
+                            Red_0.Opacity = 1;
+                            timer2.Stop();
+                        };
                         break;
 
                     case 1:
-                            Yellow_1.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\Y2.png"));
-                            Thread.Sleep(150);
-                            Yellow_1.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\Y1.png"));
+                        timer1.Start();
+                        timer1.Tick += (sender, args) =>
+                        {
+                            Yellow_1.Opacity = 0.5;
+                            timer1.Stop();
+                        };
+                        timer2.Start();
+                        timer2.Tick += (sender, args) =>
+                        {
+                            Yellow_1.Opacity = 1;
+                            timer2.Stop();
+                        };
                         break;
 
                     case 2:
-                            Blue_2.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\B2.png"));
-                            Thread.Sleep(150);
-                            Blue_2.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\B1.png"));
+                        timer1.Start();
+                        timer1.Tick += (sender, args) =>
+                        {
+                            Blue_2.Opacity = 0.5;
+                            timer1.Stop();
+                        };
+                        timer2.Start();
+                        timer2.Tick += (sender, args) =>
+                        {
+                            Blue_2.Opacity = 1;
+                            timer2.Stop();
+                        };
                         break;
 
                     case 3:
-                            Green_3.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\G2.png"));
-                            Thread.Sleep(150);
-                            Green_3.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\G1.png"));
+                        timer1.Start();
+                        timer1.Tick += (sender, args) =>
+                        {
+                            Green_3.Opacity = 0.5;
+                            timer1.Stop();
+                        };
+                        timer2.Start();
+                        timer2.Tick += (sender, args) =>
+                        {
+                            Green_3.Opacity = 1;
+                            timer2.Stop();
+                        };
                         break;
                 }
             }
             talk = false;
         }
 
-        private void startGame_Click(object sender, RoutedEventArgs e)
-        {
-            Score.Text = "Score: " + scoreCount;
-            if(scoreCount > record)
-            {
-                record = scoreCount;
-                Record.Text = "Best Score: " + record;
-            }
-            CurrentSequence.Add(random.Next(0,4));
-            new Thread(Simon_Talk).Start();
-            scoreCount = 0;
-        }
-
-        private void verify_Sequence(int button_pressed)
+        private void Verify_Sequence(int button_pressed)
         {
             if (talk == false && CurrentSequence.Count > 0)
             {
                 {
                     if (scoreCount >= CurrentSequence.Count)
                     {
-                        MessageBox.Show("Game Over ! Too many Sequences!");
-                        scoreCount = 0;
-                        CurrentSequence.Clear();
+                        GameOver();
                     }
                     else
                         if (button_pressed == CurrentSequence[scoreCount])
                     {
                         scoreCount++;
+                        Score.Text = "Score: " + scoreCount;
+
+                        if(scoreCount > record)
+                        {
+                            record = scoreCount;
+                            Record.Text = "Best Score: " + record;
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Game Over! Maybe Next Time...");
-                        scoreCount = 0;
-                        CurrentSequence.Clear();
+                        GameOver();
                     }
-
                 }
+
             }
         }
 
-        private void Red_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Button_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Red_0.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\R2.png"));
-            
+            Image image = (sender as Image)!;
+            image.Opacity = 0.5;
+            Verify_Sequence(int.Parse(image.Name.ToString().Split('_')[1]));
         }
-        private void Red_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            Red_0.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\R1.png"));
 
-        }
-        private void Yellow_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Button_MouseUp(object sender, MouseEventArgs e)
         {
-            Yellow_1.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\Y2.png"));
-
-        }
-        private void Yellow_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            Yellow_1.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\Y1.png"));
-        }
-        private void Blue_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            Blue_2.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\B2.png"));
-
-        }
-        private void Blue_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            Blue_2.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\B1.png"));
-        }
-        private void Green_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            Green_3.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\G2.png"));
-
-        }
-        private void Green_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            Green_3.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SaimonGame\\saimon assets\\G1.png"));
+            Image image = (sender as Image)!;
+            image.Opacity = 1;
         }
     }
 }
-
-//System.Windows.Controls.Image image = (System.Windows.Controls.Image)sender;
-//verify_Sequence(int.Parse(image.Name.ToString().Split('_')[1]));

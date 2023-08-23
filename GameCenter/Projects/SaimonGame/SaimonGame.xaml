@@ -13,10 +13,10 @@
         <TextBlock x:Name="Record" HorizontalAlignment="Center" Margin="0,125,0,0" TextWrapping="Wrap" Text="Best Score: 0" VerticalAlignment="Top" Height="50" Width="170" FontSize="25"/>
 
         <WrapPanel HorizontalAlignment="Left" Height="320" Margin="235,180,0,0" VerticalAlignment="Top" Width="330" Name="wrapPanel">
-            <Image x:Name="Red_0" Width="160" Height="160" Margin="0,0,4,0" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\SaimonGame\saimon assets\R1.png" MouseLeftButtonDown="Red_MouseDown"  MouseLeftButtonUp="Red_MouseUp"/>
-            <Image x:Name="Yellow_1" Width="160" Height="160" Margin="4,0,0,0"  Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\SaimonGame\saimon assets\Y1.png" MouseLeftButtonDown="Yellow_MouseDown" MouseLeftButtonUp="Yellow_MouseUp" />
-            <Image x:Name="Blue_2" Width="160" Height="160" Margin="0,0,4,0" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\SaimonGame\saimon assets\B1.png" MouseLeftButtonDown="Blue_MouseDown" MouseLeftButtonUp="Blue_MouseUp"/>
-            <Image x:Name="Green_3" Width="160" Height="160" Margin="4,0,0,0" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\SaimonGame\saimon assets\g1.png" MouseLeftButtonDown="Green_MouseDown" MouseLeftButtonUp="Green_MouseUp"/>
+            <Image x:Name="Red_0" Width="160" Height="160" Margin="0,0,4,0" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\SaimonGame\saimon assets\R1.png" MouseLeftButtonDown="Button_MouseDown"  MouseLeftButtonUp="Button_MouseUp"/>
+            <Image x:Name="Yellow_1" Width="160" Height="160" Margin="4,0,0,0"  Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\SaimonGame\saimon assets\Y1.png" MouseLeftButtonDown="Button_MouseDown"  MouseLeftButtonUp="Button_MouseUp"/>
+            <Image x:Name="Blue_2" Width="160" Height="160" Margin="0,0,4,0" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\SaimonGame\saimon assets\B1.png" MouseLeftButtonDown="Button_MouseDown"  MouseLeftButtonUp="Button_MouseUp"/>
+            <Image x:Name="Green_3" Width="160" Height="160" Margin="4,0,0,0" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\SaimonGame\saimon assets\g1.png" MouseLeftButtonDown="Button_MouseDown"  MouseLeftButtonUp="Button_MouseUp"/>
         </WrapPanel>
 
         <Button x:Name="startGame" Content="Start Game" HorizontalAlignment="Left" Margin="290,567,0,0" VerticalAlignment="Top" Width="192" Height="51" FontSize="20" FontWeight="Bold" Click="startGame_Click"/>

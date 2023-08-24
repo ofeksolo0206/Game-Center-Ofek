@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GameCenter"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1400">
-    <Grid Background="SkyBlue">
+    <Grid Background="BlanchedAlmond">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
@@ -16,7 +16,7 @@
             <RowDefinition Height="0.7*"></RowDefinition>
             <RowDefinition Height="0.5*"></RowDefinition>
             <RowDefinition Height="4*"></RowDefinition>
-            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="0.3*"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Label x:Name="ProjectTitle"
@@ -26,12 +26,13 @@
             VerticalContentAlignment="Center"
             Content="Game center" 
             HorizontalContentAlignment="Center" 
-            Background="LightGray"
+            Background="LightBlue"
             FontWeight="Bold"
             FontSize="60"
+            FontFamily="Arial"
      />
 
-        <Label     x:Name="DateLabel"    Content="Date"     Grid.Row="0"     Grid.Column="2"     Grid.ColumnSpan="3"     HorizontalContentAlignment="Center"    VerticalContentAlignment="Center"     FontFamily="Arial Black"     FontSize="15"/>
+        <Label     x:Name="TimeDateLabel"    Content="Date"     Grid.Row="0"     Grid.Column="2"     Grid.ColumnSpan="3"     HorizontalContentAlignment="Center"    VerticalContentAlignment="Center"     FontFamily="Arial black"     FontSize="15"/>
 
         <Label 
          x:Name="GameText"
@@ -41,6 +42,8 @@
          VerticalAlignment="Center" 
          HorizontalAlignment="Center"
          FontSize="26"
+         FontWeight="Bold"
+         FontFamily="Arial"
      />
         
         
@@ -54,7 +57,7 @@
             <Image x:Name="Image6" Source="\Images\currencyConvertor.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image6_MouseLeftButtonUp"/>
             <Image x:Name="Image7" Source="\Images\memoryGame.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image7_MouseLeftButtonUp"/>
             <Image x:Name="Image8" Source="\Images\saimonGame.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image8_MouseLeftButtonUp"/>
-            <Image x:Name="Image9" Source="\Images\tetrisGame.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image9_MouseLeftButtonUp"/>
+            <Image x:Name="Image9" Source="\Images\SniperShootingGame.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image9_MouseLeftButtonUp"/>
             
         </WrapPanel>
 
@@ -64,7 +67,7 @@
             Grid.ColumnSpan="3"
             VerticalContentAlignment="Center"
             HorizontalContentAlignment="Center" 
-            Background="LightGray"
+            Background="LightBlue"
             FontWeight="Bold"
             FontSize="23"
      />

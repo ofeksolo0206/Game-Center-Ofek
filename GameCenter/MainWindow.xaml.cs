@@ -21,7 +21,7 @@ using GameCenter.Projects.CarGame;
 using GameCenter.Projects.CurrencyConverter;
 using GameCenter.Projects.MemoryGame;
 using GameCenter.Projects.SaimonGame;
-using GameCenter.Projects.TetrisGame;
+using GameCenter.Projects.SniperShootingGame;
 using GameCenter.Projects;
 
 namespace GameCenter
@@ -45,7 +45,7 @@ namespace GameCenter
 
         private void ShowCurrentDate(object sender, EventArgs e)
         {
-            DateLabel.Content = DateTime.UtcNow.ToString("dddd, dd, MMMM, yyyy HH:mm:ss");
+            TimeDateLabel.Content = DateTime.UtcNow.ToString("dddd, dd, MMMM, yyyy HH:mm:ss");
         }
         private void Image_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -54,22 +54,22 @@ namespace GameCenter
             GameText.Content = (image.Name) switch
             {
                 "Image1" => "User Management System",
-                "Image2" => "To Do List project",
-                "Image3" => "Tic tac toe game",
-                "Image4" => "Flappy Bird game",
-                "Image5" => "Car game",
+                "Image2" => "To Do List Project",
+                "Image3" => "Tic tac toe Game",
+                "Image4" => "Flappy Bird Game",
+                "Image5" => "Car Game",
                 "Image6" => "Currency Convertor Application",
-                "Image7" => "Memory game",
-                "Image8" => "Saimon game",
-                "Image9" => "Tetris game",
-                _ => "please pick a game"
+                "Image7" => "Memory Game",
+                "Image8" => "Saimon Game",
+                "Image9" => "Sniper Shooting Game",
+                _ => "please pick a Game"
             };
         }
 
         private void Image_MouseLeave(object sender, MouseEventArgs e)
         {
             (sender as Image)!.Opacity = 1;
-            GameText.Content = "please pick a game";
+            GameText.Content = "Please Pick a Game";
         }
 
         //private void Image1_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -323,9 +323,9 @@ namespace GameCenter
 
         private void Image9_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            TetrisGame tetrisGame = new();
+            SniperShootingGame sniperShootingGame = new();
             projectPresentetationPage presentetion = new();
-            presentetion.OnStart("Tetris Game", "" +
+            presentetion.OnStart("Sniper Shooting Game", "" +
                 "Welcome to my Users-Managmant. " +
                 "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
                 "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
@@ -334,14 +334,14 @@ namespace GameCenter
                 "It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
                 "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker " +
                 "including versions of Lorem Ipsum.",
-                Image8.Source,
-                tetrisGame
+                Image9.Source,
+                sniperShootingGame
                 );
             Hide();
             presentetion.ShowDialog();
             ShowDialog();
             presentetion.Close();
-            tetrisGame.Close();
+            sniperShootingGame.Close();
         }
 
 

@@ -124,6 +124,7 @@ namespace GameCenter.Projects.CarGame
 
             if (isGameOver)
             {
+                backgroundVideo.Stop();
                 score = 0;
                 scoreTextBlock.Text = "score: " + score;
                 MessageBoxResult result = MessageBox.Show("Game Over! Would you like to play again?", "Game Over", MessageBoxButton.YesNo);
@@ -138,6 +139,7 @@ namespace GameCenter.Projects.CarGame
                     playerCar.X = 200;
                     playerCar.Y = 300;
                     (sender as DispatcherTimer).Start();
+                    backgroundVideo.Play();
 
                 }
                 if (result == MessageBoxResult.No)

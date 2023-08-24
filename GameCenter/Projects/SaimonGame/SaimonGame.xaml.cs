@@ -61,10 +61,8 @@ namespace GameCenter.Projects.SaimonGame
             }
         }
 
-        private void Simon_Talk()
+        private async void Simon_Talk()
         {
-            var timer1 = new DispatcherTimer { Interval = TimeSpan.FromSeconds(0.4) };
-            var timer2 = new DispatcherTimer { Interval = TimeSpan.FromSeconds(CurrentSequence.Count / 10 + 0.8) };
             talk = true;
 
             foreach (int i in CurrentSequence)
@@ -72,65 +70,28 @@ namespace GameCenter.Projects.SaimonGame
                 switch (i)
                 {
                     case 0:
-                        timer1.Start();
-                        timer1.Tick += (sender, args) =>
-                        {
-                            Red_0.Opacity = 0.5;
-                            timer1.Stop();
-                        };
-                        timer2.Start();
-                        timer2.Tick += (sender, args) =>
-                        {
-                            Red_0.Opacity = 1;
-                            timer2.Stop();
-                        };
+                        Red_0.Opacity = 0.3;
+                        await Task.Delay(TimeSpan.FromSeconds(0.1));
+                        Red_0.Opacity = 1;
                         break;
-
                     case 1:
-                        timer1.Start();
-                        timer1.Tick += (sender, args) =>
-                        {
-                            Yellow_1.Opacity = 0.5;
-                            timer1.Stop();
-                        };
-                        timer2.Start();
-                        timer2.Tick += (sender, args) =>
-                        {
-                            Yellow_1.Opacity = 1;
-                            timer2.Stop();
-                        };
+                        Yellow_1.Opacity = 0.3;
+                        await Task.Delay(TimeSpan.FromSeconds(0.1));
+                        Yellow_1.Opacity = 1;
                         break;
-
                     case 2:
-                        timer1.Start();
-                        timer1.Tick += (sender, args) =>
-                        {
-                            Blue_2.Opacity = 0.5;
-                            timer1.Stop();
-                        };
-                        timer2.Start();
-                        timer2.Tick += (sender, args) =>
-                        {
-                            Blue_2.Opacity = 1;
-                            timer2.Stop();
-                        };
+                        Blue_2.Opacity = 0.3;
+                        await Task.Delay(TimeSpan.FromSeconds(0.1));
+                        Blue_2.Opacity = 1;
+                        break;
+                    case 3:
+                        Green_3.Opacity = 0.3;
+                        await Task.Delay(TimeSpan.FromSeconds(0.1));
+                        Green_3.Opacity = 1;
                         break;
 
-                    case 3:
-                        timer1.Start();
-                        timer1.Tick += (sender, args) =>
-                        {
-                            Green_3.Opacity = 0.5;
-                            timer1.Stop();
-                        };
-                        timer2.Start();
-                        timer2.Tick += (sender, args) =>
-                        {
-                            Green_3.Opacity = 1;
-                            timer2.Stop();
-                        };
-                        break;
                 }
+                await Task.Delay(TimeSpan.FromSeconds(0.1));
             }
             talk = false;
         }

@@ -6,30 +6,32 @@
         xmlns:local="clr-namespace:GameCenter"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1400">
-    <Grid>
+    <Grid Background="SkyBlue">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="0.7*"></RowDefinition>
             <RowDefinition Height="0.5*"></RowDefinition>
-            <RowDefinition Height="0.5*"></RowDefinition>
-            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
             <RowDefinition Height="0.5*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Label x:Name="addUserTitle"
+        <Label x:Name="ProjectTitle"
             Grid.Column="0"
             Grid.Row="0"
             Grid.ColumnSpan="3"
             VerticalContentAlignment="Center"
             Content="Game center" 
             HorizontalContentAlignment="Center" 
-            Background="AliceBlue"
+            Background="LightGray"
             FontWeight="Bold"
             FontSize="60"
      />
+
+        <Label     x:Name="DateLabel"    Content="Date"     Grid.Row="0"     Grid.Column="2"     Grid.ColumnSpan="3"     HorizontalContentAlignment="Center"    VerticalContentAlignment="Center"     FontFamily="Arial Black"     FontSize="15"/>
 
         <Label 
          x:Name="GameText"
@@ -40,16 +42,19 @@
          HorizontalAlignment="Center"
          FontSize="26"
      />
+        
+        
 
         <WrapPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Image x:Name="Image1" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\square1.jpeg" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image1_MouseLeftButtonUp"/>
-            <Image x:Name="Image2" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\square1.jpeg" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image2_MouseLeftButtonUp"/>
-            <Image x:Name="Image3" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\square1.jpeg" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image3_MouseLeftButtonUp"/>
-            <Image x:Name="Image4" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\square1.jpeg" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image4_MouseLeftButtonUp"/>
-            <Image x:Name="Image5" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\square1.jpeg" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image5_MouseLeftButtonUp"/>
-            <Image x:Name="Image6" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\square1.jpeg" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image6_MouseLeftButtonUp"/>
-            <Image x:Name="Image7" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\square1.jpeg" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image7_MouseLeftButtonUp"/>
-            <Image x:Name="Image8" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\square1.jpeg" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image8_MouseLeftButtonUp"/>
+            <Image x:Name="Image1" Source="\Images\userManagement.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image1_MouseLeftButtonUp"/>
+            <Image x:Name="Image2" Source="\Images\todoList.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image2_MouseLeftButtonUp"/>
+            <Image x:Name="Image3" Source="\Images\tic-tac-toe.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image3_MouseLeftButtonUp"/>
+            <Image x:Name="Image4" Source="\Images\flappyBird.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image4_MouseLeftButtonUp"/>
+            <Image x:Name="Image5" Source="\Images\carGame.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image5_MouseLeftButtonUp"/>
+            <Image x:Name="Image6" Source="\Images\currencyConvertor.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image6_MouseLeftButtonUp"/>
+            <Image x:Name="Image7" Source="\Images\memoryGame.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image7_MouseLeftButtonUp"/>
+            <Image x:Name="Image8" Source="\Images\saimonGame.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image8_MouseLeftButtonUp"/>
+            <Image x:Name="Image9" Source="\Images\tetrisGame.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image9_MouseLeftButtonUp"/>
             
         </WrapPanel>
 
@@ -59,7 +64,7 @@
             Grid.ColumnSpan="3"
             VerticalContentAlignment="Center"
             HorizontalContentAlignment="Center" 
-            Background="AliceBlue"
+            Background="LightGray"
             FontWeight="Bold"
             FontSize="23"
      />

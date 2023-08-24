@@ -8,13 +8,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\carGame.png" />
+    <None Remove="Images\currencyConvertor.png" />
+    <None Remove="Images\flappyBird.png" />
+    <None Remove="Images\memoryGame.png" />
+    <None Remove="Images\saimonGame.png" />
+    <None Remove="Images\square1.jpeg" />
+    <None Remove="Images\tetrisGame.png" />
+    <None Remove="Images\tic-tac-toe.png" />
+    <None Remove="Images\todoList.png" />
+    <None Remove="Images\userManagement.png" />
     <None Remove="Projects\CarGame\Assets\bomb.png" />
     <None Remove="Projects\CarGame\Assets\car.png" />
     <None Remove="Projects\CarGame\Assets\roadway.mp4" />
     <None Remove="Projects\FlappyBirdGame\Assets\bird.png" />
-    <None Remove="Projects\FlappyBirdGame\Assets\downPipe.png" />
+    <None Remove="Projects\FlappyBirdGame\Assets\clouds.png" />
+    <None Remove="Projects\FlappyBirdGame\Assets\clouds2.png" />
     <None Remove="Projects\FlappyBirdGame\Assets\ground.png" />
-    <None Remove="Projects\FlappyBirdGame\Assets\topPipe.png" />
+    <None Remove="Projects\FlappyBirdGame\Assets\pipeBottom.png" />
+    <None Remove="Projects\FlappyBirdGame\Assets\pipeTop.png" />
     <None Remove="Projects\MemoryGame\Assets\img1.png" />
     <None Remove="Projects\MemoryGame\Assets\img2.png" />
     <None Remove="Projects\MemoryGame\Assets\img3.png" />
@@ -30,11 +42,29 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\tetrisGame.png" />
+    <Resource Include="Images\todoList.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\carGame.png" />
+    <Resource Include="Images\currencyConvertor.png" />
+    <Resource Include="Images\flappyBird.png" />
+    <Resource Include="Images\memoryGame.png" />
+    <Resource Include="Images\saimonGame.png" />
+    <Resource Include="Images\square1.jpeg" />
+    <Resource Include="Images\tic-tac-toe.png" />
+    <Resource Include="Images\userManagement.png" />
+    <Resource Include="Projects\FlappyBirdGame\Assets\pipeBottom.png" />
+    <Resource Include="Projects\FlappyBirdGame\Assets\pipeTop.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Projects\CarGame\Assets\roadway.mp4" />
     <Resource Include="Projects\FlappyBirdGame\Assets\bird.png" />
+    <Resource Include="Projects\FlappyBirdGame\Assets\clouds.png" />
+    <Resource Include="Projects\FlappyBirdGame\Assets\clouds2.png" />
     <Resource Include="Projects\FlappyBirdGame\Assets\ground.png" />
-    <Resource Include="Projects\FlappyBirdGame\Assets\downPipe.png" />
-    <Resource Include="Projects\FlappyBirdGame\Assets\topPipe.png" />
   </ItemGroup>
 
   <ItemGroup>

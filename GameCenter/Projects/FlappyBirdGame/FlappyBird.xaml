@@ -5,13 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameCenter.Projects.FlappyBirdGame"
         mc:Ignorable="d"
-        Title="FlappyBird" Height="450" Width="800">
-    <Grid>
-        <Image x:Name="Bird" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\bird.png" Margin="26,168,711,216"/>
-        <Image x:Name="TopPipe" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\topPipe.png" Margin="350,0,350,300"/>
-        <Image x:Name="DownPipe" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\downPipe.png" HorizontalAlignment="Left"  Margin="502,239,0,0" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.488,0.469" Height="155" />
-        <Image x:Name="Ground" HorizontalAlignment="Center" Height="80" Margin="0,354,0,0" VerticalAlignment="Top" Width="800" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\ground.png" Stretch="Fill"/>
-        <Label Content="Score: 0" Width="186" Height="45" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="30" RenderTransformOrigin="0.527,0.138"/>
+        Title="FlappyBird" Height="490" Width="525">
+    <Canvas x:Name="GameCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp ="KeyIsUp" Background="LightBlue" >
+        <Image Height="145" Width="158" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\clouds.png" Canvas.Left="38" Canvas.Top="25" Tag="cloud" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Height="145" Width="155" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\clouds2.png" Canvas.Left="342" Canvas.Top="25" Tag="cloud" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-    </Grid>
+
+        <Image Height="390" Width="66" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\pipeTop.png" Canvas.Left="60" Canvas.Top="-320" Tag="obs1"/>
+        <Image Height="390" Width="66" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\pipeBottom.png" Canvas.Left="60" Canvas.Top="204" Tag="obs1"/>
+
+        <Image Height="390" Width="66" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\pipeTop.png" Canvas.Left="233" Canvas.Top="-160" Tag="obs2"/>
+        <Image Height="390" Width="66" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\pipeBottom.png" Canvas.Left="233" Canvas.Top="364" Tag="obs2"/>
+
+        <Image Height="390" Width="66" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\pipeTop.png" Canvas.Left="433" Canvas.Top="-228" Tag="obs3"/>
+        <Image Height="390" Width="66" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\pipeBottom.png" Canvas.Left="433" Canvas.Top="296" Tag="obs3"/>
+
+        <Image x:Name="Bird" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\bird.png" Height="41" Canvas.Left="26" Canvas.Top="1" Width="49"/>
+
+        <Label x:Name="Score" Content="Score: 0" Width="456" Height="45" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="ExtraBold" RenderTransformOrigin="0.527,0.138" Canvas.Left="10"/>
+
+    </Canvas>
 </Window>

@@ -38,7 +38,7 @@ namespace GameCenter.Projects.CarGame
             random = new Random();
 
             DispatcherTimer gameTimer = new DispatcherTimer();
-            gameTimer.Interval = TimeSpan.FromMilliseconds(20);
+            gameTimer.Interval = TimeSpan.FromMilliseconds(10);
             gameTimer.Tick += GameLoop;
             gameTimer.Start();
 

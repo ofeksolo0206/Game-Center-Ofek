@@ -46,24 +46,6 @@
     <None Remove="Projects\SniperShootingGame\Assets\dummy04.png" />
     <None Remove="Projects\SniperShootingGame\Assets\ghost.png" />
     <None Remove="Projects\SniperShootingGame\Assets\sniper-aim.png" />
-    <None Remove="Projects\TetrisGame\Assets\Background.png" />
-    <None Remove="Projects\TetrisGame\Assets\Block-Empty.png" />
-    <None Remove="Projects\TetrisGame\Assets\Block-I.png" />
-    <None Remove="Projects\TetrisGame\Assets\Block-J.png" />
-    <None Remove="Projects\TetrisGame\Assets\Block-L.png" />
-    <None Remove="Projects\TetrisGame\Assets\Block-O.png" />
-    <None Remove="Projects\TetrisGame\Assets\Block-S.png" />
-    <None Remove="Projects\TetrisGame\Assets\Block-T.png" />
-    <None Remove="Projects\TetrisGame\Assets\Block-Z.png" />
-    <None Remove="Projects\TetrisGame\Assets\Icon.ico" />
-    <None Remove="Projects\TetrisGame\Assets\TileBlue.png" />
-    <None Remove="Projects\TetrisGame\Assets\TileCyan.png" />
-    <None Remove="Projects\TetrisGame\Assets\TileEmpty.png" />
-    <None Remove="Projects\TetrisGame\Assets\TileGreen.png" />
-    <None Remove="Projects\TetrisGame\Assets\TileOrange.png" />
-    <None Remove="Projects\TetrisGame\Assets\TilePurple.png" />
-    <None Remove="Projects\TetrisGame\Assets\TileRed.png" />
-    <None Remove="Projects\TetrisGame\Assets\TileYellow.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -117,24 +99,6 @@
     <Resource Include="Projects\SniperShootingGame\Assets\dummy04.png" />
     <Resource Include="Projects\SniperShootingGame\Assets\ghost.png" />
     <Resource Include="Projects\SniperShootingGame\Assets\sniper-aim.png" />
-    <Resource Include="Projects\TetrisGame\Assets\Background.png" />
-    <Resource Include="Projects\TetrisGame\Assets\Block-Empty.png" />
-    <Resource Include="Projects\TetrisGame\Assets\Block-I.png" />
-    <Resource Include="Projects\TetrisGame\Assets\Block-J.png" />
-    <Resource Include="Projects\TetrisGame\Assets\Block-L.png" />
-    <Resource Include="Projects\TetrisGame\Assets\Block-O.png" />
-    <Resource Include="Projects\TetrisGame\Assets\Block-S.png" />
-    <Resource Include="Projects\TetrisGame\Assets\Block-T.png" />
-    <Resource Include="Projects\TetrisGame\Assets\Block-Z.png" />
-    <Resource Include="Projects\TetrisGame\Assets\Icon.ico" />
-    <Resource Include="Projects\TetrisGame\Assets\TileBlue.png" />
-    <Resource Include="Projects\TetrisGame\Assets\TileCyan.png" />
-    <Resource Include="Projects\TetrisGame\Assets\TileEmpty.png" />
-    <Resource Include="Projects\TetrisGame\Assets\TileGreen.png" />
-    <Resource Include="Projects\TetrisGame\Assets\TileOrange.png" />
-    <Resource Include="Projects\TetrisGame\Assets\TilePurple.png" />
-    <Resource Include="Projects\TetrisGame\Assets\TileRed.png" />
-    <Resource Include="Projects\TetrisGame\Assets\TileYellow.png" />
   </ItemGroup>
 
 </Project>

@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:GameCenter.Projects.SniperShootingGame"
         mc:Ignorable="d"
         Title="SniperShootingGame" Height="450" Width="800">
-    <Grid>
+    <Canvas x:Name="GameCanvas" Focusable="True" Background="LightBlue" MouseLeftButtonDown="ShootDummy" MouseMove="Canvas_MouseMove">
+        <Image x:Name="scopeImage" Height="60" Width="60" Panel.ZIndex="999" Canvas.Left="360" Canvas.Top="314"/>
         
-    </Grid>
+        
+        <Label x:Name="scoreText" Content="Score: 0" FontSize="14" FontWeight="ExtraBold" Canvas.Left="660" Canvas.Top="65"/>
+        <Label x:Name="missText" Content="Missed: 0" FontSize="14" FontWeight="ExtraBold" Canvas.Left="660" Canvas.Top="20"/>
+
+
+    </Canvas>
 </Window>

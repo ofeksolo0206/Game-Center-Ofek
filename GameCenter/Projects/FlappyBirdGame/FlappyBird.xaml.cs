@@ -39,7 +39,7 @@ namespace GameCenter.Projects.FlappyBirdGame
         {
             Score.Content = "Score: " + score;
 
-            flappyBirdHitBox = new Rect(Canvas.GetLeft(Bird), Canvas.GetTop(Bird), Bird.Width - 10, Bird.Height ) ;
+            flappyBirdHitBox = new Rect(Canvas.GetLeft(Bird), Canvas.GetTop(Bird), Bird.Width - 30, Bird.Height ) ;
             Canvas.SetTop(Bird, Canvas.GetTop(Bird) + gravity);
 
             if(Canvas.GetTop(Bird) < -10|| Canvas.GetTop(Bird) > 458)

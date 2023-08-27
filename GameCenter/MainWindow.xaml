@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GameCenter"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1400">
-    <Grid Background="BlanchedAlmond">
+    <Grid Background="YellowGreen">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>

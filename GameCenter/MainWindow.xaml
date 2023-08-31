@@ -32,7 +32,18 @@
             FontFamily="Arial"
      />
 
-        <Label     x:Name="TimeDateLabel"    Content="Date"     Grid.Row="0"     Grid.Column="2"     Grid.ColumnSpan="3"     HorizontalContentAlignment="Center"    VerticalContentAlignment="Center"     FontFamily="Arial black"     FontSize="15"/>
+        <Label     x:Name="TimeDateLabel"    Content=""     Grid.Row="0"     Grid.Column="2"     Grid.ColumnSpan="3"     HorizontalContentAlignment="Center"    VerticalContentAlignment="Center"     FontFamily="Arial black"     FontSize="15"
+            />
+
+        <Image
+    x:Name="UserAvatar"
+    Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\man.png"
+    Width="90"
+    Height="90"
+    Grid.Column="0"
+    Grid.Row="0"
+    MouseLeftButtonUp="Avatar_MouseLeftButtonUp"
+    />
 
         <Label 
          x:Name="GameText"

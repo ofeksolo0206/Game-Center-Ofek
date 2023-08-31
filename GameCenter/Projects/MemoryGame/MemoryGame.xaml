@@ -7,8 +7,7 @@
         mc:Ignorable="d"
         Title="MemoryGame" Height="450" Width="800">
     <Grid>
-        <Button x:Name="startGame" Content="Start Game" HorizontalAlignment="Left" Margin="543,89,0,0" VerticalAlignment="Top" Width="192" Height="51" Click="StartButton" FontSize="20" FontWeight="Bold"/>
-        <WrapPanel HorizontalAlignment="Left" Height="340" Margin="110,60,0,0" VerticalAlignment="Top" Width="325" Name="wrapPanel">
+         <WrapPanel HorizontalAlignment="Left" Height="340" Margin="110,60,0,0" VerticalAlignment="Top" Width="325" Name="wrapPanel">
             <Button x:Name="button1" Content="" Width="80" Height="82" Click="CardClick" Background="White"/>
             <Button x:Name="button2" Content="" Width="80" Height="82" Click="CardClick" Background="White"/>
             <Button x:Name="button3" Content="" Width="80" Height="82" Click="CardClick" Background="White"/>
@@ -26,10 +25,8 @@
             <Button x:Name="button15" Content="" Width="80" Height="82" Click="CardClick" Background="White"/>
             <Button x:Name="button16" Content="" Width="80" Height="82" Click="CardClick" Background="White"/>
         </WrapPanel>
-        <Button x:Name="startGame_Copy" Content="Restart" HorizontalAlignment="Left" Margin="543,166,0,0" VerticalAlignment="Top" Width="192" Height="51" Click="ResetButton" FontSize="20" FontWeight="Bold"/>
 
-        <WrapPanel>
-            <Label x:Name="timer" Content="60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="42" Width="48"/>
-        </WrapPanel>
+        <Button x:Name="startGame" Content="Restart Game" HorizontalAlignment="Left" Margin="543,217,0,0" VerticalAlignment="Top" Width="192" Height="51" Click="StartButton" FontSize="20" FontWeight="Bold"/>
+        <TextBlock x:Name="attemptsText" HorizontalAlignment="Left" Margin="543,161,0,0" TextWrapping="Wrap" Text="Attempts: 15" VerticalAlignment="Top" Height="51" Width="192" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
     </Grid>
 </Window>

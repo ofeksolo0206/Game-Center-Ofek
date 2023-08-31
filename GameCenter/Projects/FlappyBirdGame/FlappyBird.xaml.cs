@@ -23,6 +23,8 @@ namespace GameCenter.Projects.FlappyBirdGame
         DispatcherTimer gameTimer = new DispatcherTimer();
 
         double score;
+        double record;
+        bool isNewRecord = false;
         int gravity = 8;
         bool gameOver;
         Rect flappyBirdHitBox;
@@ -37,7 +39,8 @@ namespace GameCenter.Projects.FlappyBirdGame
 
         private void MainEventTimer(object? sender, EventArgs e)
         {
-            Score.Content = "Score: " + score;
+            ScoreText.Content = "Score: " + score;
+            RecordText.Content = "Record: "+ record;
 
             flappyBirdHitBox = new Rect(Canvas.GetLeft(Bird), Canvas.GetTop(Bird), Bird.Width - 30, Bird.Height ) ;
             Canvas.SetTop(Bird, Canvas.GetTop(Bird) + gravity);
@@ -57,6 +60,11 @@ namespace GameCenter.Projects.FlappyBirdGame
                     {
                         Canvas.SetLeft(x, 800);
                         score += .5;
+                        if(score > record)
+                        {
+                            record = score;
+                            isNewRecord = true;
+                        }
                     }
 
                     Rect pipeHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
@@ -109,6 +117,7 @@ namespace GameCenter.Projects.FlappyBirdGame
             GameCanvas.Focus();
             int temp = 300;
             score = 0;
+            isNewRecord = false;
             gameOver = false;
             Canvas.SetTop(Bird, 190);
 
@@ -140,7 +149,11 @@ namespace GameCenter.Projects.FlappyBirdGame
         {
             gameTimer.Stop();
             gameOver = true;
-            Score.Content += " Game Over! Press R to try again";
+            ScoreText.Content = "Game Over! Press R to try again";
+            if (isNewRecord)
+            {
+                RecordText.Content = $"Record: {record}. New Record Achived!";
+            } 
         }
     }
 }

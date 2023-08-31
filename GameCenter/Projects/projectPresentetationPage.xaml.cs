@@ -34,9 +34,19 @@ namespace GameCenter.Projects
 
         private void ShowCurrentDate(object sender, EventArgs e)
         {
-            DateLabel.Content = DateTime.UtcNow.ToString("dddd, dd, MMMM, yyyy HH:mm:ss");
+            DateLabel.Content = DateTime.UtcNow.ToString();
         }
 
+        private void Image_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Image image = (sender as Image)!;
+            image.Opacity = 0.6;
+        }
+
+            private void Image_MouseLeave(object sender, MouseEventArgs e)
+        {
+            (sender as Image)!.Opacity = 1;
+        }
         public void OnStart(string title, string projectDescription, ImageSource imageSoursce, Window project)
         {
             TitleLabel.Content = title;
@@ -49,6 +59,11 @@ namespace GameCenter.Projects
         {
             Hide();
             currentProject.ShowDialog();
+            Close();
+        }
+
+        private void Avatar_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
             Close();
         }
     }

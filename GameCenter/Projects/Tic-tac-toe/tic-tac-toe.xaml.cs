@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameCenter.Projects.Tic_tac_toe.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,102 +18,104 @@ namespace GameCenter.Projects.Tic_tac_toe
     /// <summary>
     /// Interaction logic for tic_tac_toe.xaml
     /// </summary>
-    public partial class tic_tac_toe : Window
+    public partial class Tic_tac_toe : Window
     {
-        private char _currentPlayer = 'X';
-        private char[,] _board = new char[3, 3];
+        TicTacToeModel GameModel;
+        int UserScore = 0;
+        int ComputerScore = 0;
 
-        public tic_tac_toe()
+        public Tic_tac_toe()
         {
             InitializeComponent();
-            InitializeBoard();
+            GameModel = new TicTacToeModel();
         }
 
-        private void InitializeBoard()
+        private void UserPlay(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < 3; i++)
+            Button button = (Button)sender;
+            int boardRow = Grid.GetRow(button);
+            int boardCol = Grid.GetColumn(button);
+            if (button != null  && GameModel.GameBoard[boardRow,boardCol] == '\0' )
             {
-                for (int j = 0; j < 3; j++)
+                button.Content = GameModel.CurrentPlayer.ToString();
+                int row = Grid.GetRow(button);
+                int column = Grid.GetColumn(button);
+                GameModel.GameBoard[row, column] = GameModel.CurrentPlayer;
+
+                if (GameModel.CheckForWin())
                 {
-                    _board[i, j] = ' ';
-                }
-            }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Button btn = (Button)sender;
-
-            int row = Grid.GetRow(btn);
-            int col = Grid.GetColumn(btn);
-
-            if (_board[row, col] == ' ')
-            {
-                _board[row, col] = _currentPlayer;
-                btn.Content = _currentPlayer;
-
-                if (CheckForWin(_currentPlayer))
-                {
-                    MessageBox.Show($"{_currentPlayer} wins!", "Game Over", MessageBoxButton.OK, MessageBoxImage.Information);
+                    UserScore++;
+                    MessageBox.Show($"Computer Score: {ComputerScore} \n User Score: {UserScore}", "Game Over", MessageBoxButton.OK, MessageBoxImage.Information);
                     ResetGame();
-
-                }
-                else if (IsBoardFull())
-                {
-                    MessageBox.Show("It's a draw!", "Game Over", MessageBoxButton.OK, MessageBoxImage.Information);
-                    ResetGame();
-
                 }
                 else
                 {
-                    _currentPlayer = (_currentPlayer == 'X') ? 'O' : 'X';
+                    if (GameModel.IsBoardFull())
+                    {
+                        MessageBox.Show($"It's a draw! \n Computer Score: {ComputerScore} \n User Score: {UserScore}", "Game Over", MessageBoxButton.OK, MessageBoxImage.Information);
+                        ResetGame();
+                    }
+                    else
+                    {
+                        ComputerPlay();
+                    }
                 }
             }
         }
 
-        private bool CheckForWin(char player)
+        private async void ComputerPlay()
         {
-            // Check rows, columns, and diagonals for a win
-            for (int i = 0; i < 3; i++)
+            await Task.Delay(500);
+            GameModel.CurrentPlayer = 'O';
+            Random random = new Random();
+            int row,column;
+
+            do
             {
-                if (_board[i, 0] == player && _board[i, 1] == player && _board[i, 2] == player)
-                    return true;
+                row = random.Next(3);
+                column = random.Next(3);
+            } while (GameModel.GameBoard[row, column] != '\0');
+            Button ? computerButton = FindButton(row, column);
 
-                if (_board[0, i] == player && _board[1, i] == player && _board[2, i] == player)
-                    return true;
-            }
-
-            if (_board[0, 0] == player && _board[1, 1] == player && _board[2, 2] == player)
-                return true;
-
-            if (_board[0, 2] == player && _board[1, 1] == player && _board[2, 0] == player)
-                return true;
-
-            return false;
-        }
-
-        private bool IsBoardFull()
-        {
-            foreach (char cell in _board)
+            if(computerButton != null)
             {
-                if (cell == ' ')
+                computerButton.Content = GameModel.CurrentPlayer;
+                GameModel.GameBoard[row, column] = GameModel.CurrentPlayer;
+                if (GameModel.CheckForWin())
                 {
-                    return false;
+                    ComputerScore++;
+                    MessageBox.Show($"Computer Score: {ComputerScore} \n User Score: {UserScore}", "Game Over", MessageBoxButton.OK, MessageBoxImage.Information);
+                    ResetGame();
                 }
+                else
+                {
+                    GameModel.CurrentPlayer = 'X';
+                }
+                
+
+                
             }
-            return true;
         }
 
+        private Button ? FindButton(int row, int column)
+        {
+            foreach(UIElement element in MainGrid.Children)
+            {
+                if(element is Button button && Grid.GetRow(button) == row && Grid.GetColumn(button) == column)
+                {
+                    return button;
+                }
+            }
+            return null;
+        }
         private void ResetGame()
         {
-            _currentPlayer = 'X';
-            InitializeBoard();
+            GameModel = new TicTacToeModel();
 
-            foreach (Button btn in MainGrid.Children)
+            // Clear the game board
+            foreach (Button button in MainGrid.Children)
             {
-                btn.Content = null;
-
-
+                button.Content = "";
             }
         }
 

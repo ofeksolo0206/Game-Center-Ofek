@@ -22,7 +22,8 @@
 
         <Image x:Name="Bird" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\FlappyBirdGame\Assets\bird.png" Height="41" Canvas.Left="26" Canvas.Top="1" Width="49"/>
 
-        <Label x:Name="Score" Content="Score: 0" Width="456" Height="45" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="ExtraBold" RenderTransformOrigin="0.527,0.138" Canvas.Left="10"/>
+        <Label x:Name="ScoreText" Content="Score: 0" Width="487" Height="45" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="ExtraBold"  Canvas.Left="10"/>
+        <Label x:Name="RecordText" Content="Record: 0" Width="487" Height="45" HorizontalAlignment="Center" HorizontalContentAlignment="Left" VerticalAlignment="Top" FontSize="20" FontWeight="ExtraBold"  Canvas.Left="11" Canvas.Top="48"/>
 
     </Canvas>
 </Window>

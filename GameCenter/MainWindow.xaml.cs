@@ -72,6 +72,10 @@ namespace GameCenter
             GameText.Content = "Please Pick a Game";
         }
 
+        private void Avatar_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
         //private void Image1_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         //{
         //    Project1 project1 = new();
@@ -112,14 +116,14 @@ namespace GameCenter
         //    Show();
         //}
 
-        //private async void Image6_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        //{
-        //    CurrencyConvertorView currencyConvertor = new();
-        //    await currencyConvertor.InitializeAsync();
-        //    Hide();
-        //    currencyConvertor.ShowDialog();
-        //    Show();
-        //}
+        private async void Image6_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            CurrencyConvertorView currencyConvertor = new();
+            await currencyConvertor.InitializeAsync();
+            Hide();
+            currencyConvertor.ShowDialog();
+            Show();
+        }
 
         //private void Image7_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         //{
@@ -142,7 +146,7 @@ namespace GameCenter
             Project1 project1 = new();
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Users Managment System", "" +
-                "Welcome to my Users-Managmant. " +
+                "Welcome to my Users-Managment Program. " +
                 "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
                 "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
                 "It has survived not only five centuries, but also the leap into electronic typesetting, " +
@@ -165,7 +169,7 @@ namespace GameCenter
             TodoList todoList = new();
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("To-Do List Program", "" +
-                "Welcome to my Users-Managmant. " +
+                "This is a To-do List Project. " +
                 "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
                 "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
                 "It has survived not only five centuries, but also the leap into electronic typesetting, " +
@@ -185,7 +189,7 @@ namespace GameCenter
 
         private void Image3_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            tic_tac_toe tic_Tac_Toe = new();
+            Tic_tac_toe tic_tac_toe = new();
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Tic Tac Toe Game", "" +
                 "Welcome to my Users-Managmant. " +
@@ -197,13 +201,13 @@ namespace GameCenter
                 "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker " +
                 "including versions of Lorem Ipsum.",
                 Image3.Source,
-                tic_Tac_Toe
+                tic_tac_toe
                 );
             Hide();
             presentetion.ShowDialog();
             ShowDialog();
             presentetion.Close();
-            tic_Tac_Toe.Close();
+            tic_tac_toe.Close();
         }
 
         private void Image4_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -252,28 +256,28 @@ namespace GameCenter
             carGame.Close();
         }
 
-        private void Image6_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            CurrencyConvertorView currencyConvertor = new();
-            projectPresentetationPage presentetion = new();
-            presentetion.OnStart("Currency Convertor Program", "" +
-                "Welcome to my Users-Managmant. " +
-                "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
-                "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
-                "It has survived not only five centuries, but also the leap into electronic typesetting, " +
-                "remaining essentially unchanged. " +
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
-                "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker " +
-                "including versions of Lorem Ipsum.",
-                Image6.Source,
-                currencyConvertor
-                );
-            Hide();
-            presentetion.ShowDialog();
-            ShowDialog();
-            presentetion.Close();
-            currencyConvertor.Close();
-        }
+        //private void Image6_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        //{
+        //    CurrencyConvertorView currencyConvertor = new();
+        //    projectPresentetationPage presentetion = new();
+        //     presentetion.OnStart("Currency Convertor Program", "" +
+        //        "Welcome to my Users-Managmant. " +
+        //        "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
+        //        "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
+        //        "It has survived not only five centuries, but also the leap into electronic typesetting, " +
+        //        "remaining essentially unchanged. " +
+        //        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
+        //        "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker " +
+        //        "including versions of Lorem Ipsum.",
+        //        Image6.Source,
+        //        currencyConvertor
+        //        );
+        //    Hide();
+        //    presentetion.ShowDialog();
+        //    ShowDialog();
+        //    presentetion.Close();
+        //    currencyConvertor.Close();
+        //}
 
         private void Image7_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {

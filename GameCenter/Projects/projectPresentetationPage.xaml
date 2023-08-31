@@ -6,12 +6,104 @@
         xmlns:local="clr-namespace:GameCenter.Projects"
         mc:Ignorable="d"
         Title="projectPresentetationPage" Height="600" Width="1000">
-    <Grid>
-        <Grid.ColumnDefinitions>            <ColumnDefinition Width="0.5*" />            <ColumnDefinition Width="1*" />            <ColumnDefinition Width="0.5*" />        </Grid.ColumnDefinitions>        <Grid.RowDefinitions>            <RowDefinition Height="0.4*" />            <RowDefinition Height="0.6*" />            <RowDefinition Height="1.5*" />            <RowDefinition Height="0.3*" />        </Grid.RowDefinitions>
+    <Grid Background="GreenYellow">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="0.2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
 
-        <Label     x:Name="TitleLabel"    Content="Game Center"     Grid.Row="0"     Grid.Column="0"     Grid.ColumnSpan="3"     Background="AliceBlue"    HorizontalContentAlignment="Center"    VerticalContentAlignment="Center" FontFamily="Arial Black" FontSize="40"/>        <Label     x:Name="DateLabel"    Content="Date"     Grid.Row="0"     Grid.Column="2"     Grid.ColumnSpan="3"     Background="AliceBlue"    HorizontalContentAlignment="Center"    VerticalContentAlignment="Center"     FontFamily="Arial Black"     FontSize="12"/>
-        <TextBlock     x:Name="ProjectText"    Grid.Column="1"    Grid.Row="1"    VerticalAlignment="Center"    HorizontalAlignment="Center"    FontSize="16"/>
-        <Image     x:Name="ProjectImage"     Grid.Column="1"    Grid.Row="2"    Margin="25"    HorizontalAlignment="Center"    VerticalAlignment="Center" MouseLeftButtonUp="ProjectImage_MouseLeftButtonUp"            />
+        <Grid
+            Grid.Column="0"
+            Grid.Row="0"
+            Background="LightBlue"
+            >
+            <Image
+     x:Name="UserAvatar"
+     Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\man.png"
+     Width="50"
+     Height="50"
+     MouseLeftButtonUp="Avatar_MouseLeftButtonUp"
+     />
+        </Grid>
+       
+
+        <Label 
+            x:Name="TitleLabel"
+            Content="Game Center" 
+            Grid.Row="0" 
+            Grid.Column="1" 
+            Background="LightBlue"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            FontFamily="Arial Black"
+            FontSize="40"
+            />
+
+        <Label 
+            x:Name="DateLabel"
+            Content="Date" 
+            Grid.Row="0" 
+            Grid.Column="2" 
+            Background="LightBlue"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center" 
+            FontFamily="Arial Black" 
+            FontSize="12"
+            />
+
+        <Grid Grid.Row="1" Grid.ColumnSpan="3" >
+            <TextBlock
+                x:Name="DescriptionTitle"
+                Text="About The Project"
+                Height="55"
+                FontSize="22"
+                FontWeight="ExtraBold"
+                FontFamily="Arial Black"
+                Margin="373,41,373,358"
+                />
+
+            <TextBlock             
+                x:Name="ProjectText"
+                Width="579"
+                Height="289"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                FontSize="16"
+                FontWeight="Bold"
+                TextWrapping="Wrap"
+                Margin="373,114,0,0" 
+            />
+            <Image 
+          
+            x:Name="ProjectImage" 
+            Width="275"
+            Height="314"
+            Margin="41,66,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            MouseLeftButtonUp="ProjectImage_MouseLeftButtonUp"
+            MouseEnter="Image_MouseEnter"
+            MouseLeave="Image_MouseLeave"
+            />
+        </Grid>
+
+        <Label x:Name="Footer"
+            Grid.Column="0"
+            Grid.Row="3"
+            Grid.ColumnSpan="3"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center" 
+            Background="LightBlue"
+            FontWeight="Bold"
+            FontSize="23"
+     />
+
 
     </Grid>
 </Window>

@@ -11,10 +11,10 @@
     <None Remove="Images\carGame.png" />
     <None Remove="Images\currencyConvertor.png" />
     <None Remove="Images\flappyBird.png" />
+    <None Remove="Images\man.png" />
     <None Remove="Images\memoryGame.png" />
     <None Remove="Images\saimonGame.png" />
     <None Remove="Images\sniperShootingGame.png" />
-    <None Remove="Images\tetrisGame.png" />
     <None Remove="Images\tic-tac-toe.png" />
     <None Remove="Images\todoList.png" />
     <None Remove="Images\userManagement.png" />
@@ -49,12 +49,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\man.png" />
     <Resource Include="Images\sniperShootingGame.png" />
+    <Resource Include="Images\tic-tac-toe.png" />
     <Resource Include="Projects\SniperShootingGame\Assets\background.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\tetrisGame.png" />
     <Resource Include="Images\todoList.png" />
   </ItemGroup>
 
@@ -64,7 +69,6 @@
     <Resource Include="Images\flappyBird.png" />
     <Resource Include="Images\memoryGame.png" />
     <Resource Include="Images\saimonGame.png" />
-    <Resource Include="Images\tic-tac-toe.png" />
     <Resource Include="Images\userManagement.png" />
     <Resource Include="Projects\FlappyBirdGame\Assets\pipeBottom.png" />
     <Resource Include="Projects\FlappyBirdGame\Assets\pipeTop.png" />

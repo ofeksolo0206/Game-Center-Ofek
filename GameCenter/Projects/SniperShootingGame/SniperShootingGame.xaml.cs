@@ -156,33 +156,36 @@ namespace GameCenter.Projects.SniperShootingGame
                 if((string)i.Tag =="top" ||  (string)i.Tag == "bottom")
                 {
                     removeThis.Add(i);
-
                     topCount--;
                     bottomCount--;
-
                     miss++;
-
-                    if(miss >= 20)
+            }
+                 if(miss >= 10)
                     {
                         DummyMoveTimer.Stop();
-                        MessageBoxResult result = MessageBox.Show("Game Over! Would you like to play again?", "Game Over", MessageBoxButton.YesNo);
+                    List<Rectangle> rectangles = GameCanvas.Children.OfType<Rectangle>().ToList();
+                    foreach (Rectangle rect in rectangles)
+                    {
+                        GameCanvas.Children.Remove(rect);
+                    }
+                    MessageBoxResult result = MessageBox.Show("Game Over! Would you like to play again?", "Game Over", MessageBoxButton.YesNo);
                         if (result == MessageBoxResult.Yes)
                         {
                             score = 0;
                             miss = 0;
                             scoreText.Content = "Score: " + score;
-                            scoreText.Content = "Missed: " + score;
-                            GameCanvas.Children.Clear();
+                            missText.Content = "Missed: " + score;
+                        DummyMoveTimer.Start();
+                        return;
                         }
                         if (result == MessageBoxResult.No)
                         {
-                            Close();
+                        Close();
+                        break;
                         }
                     }
 
                 }
-            }
-
             //-makes sure there wont be 2 dummies together in the same window-//
             if(topCount < 3)
             {

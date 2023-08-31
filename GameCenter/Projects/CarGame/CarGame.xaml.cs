@@ -25,6 +25,7 @@ namespace GameCenter.Projects.CarGame
         private List<Obstacle> obstacles;
         private Random random;
         private int score;
+        private int record;
 
         public CarGame()
         {
@@ -75,7 +76,7 @@ namespace GameCenter.Projects.CarGame
         }
 
 
-        private void GameLoop(object sender, EventArgs e)
+        private void GameLoop(object ? sender, EventArgs e)
         {
             bool isGameOver = false;
             playerCar.Move();
@@ -106,6 +107,11 @@ namespace GameCenter.Projects.CarGame
                     gameCanvas.Children.Remove(obstacle.Representation);
                     obstacles.Remove(obstacle);
                     score++;
+                    if (score > record)
+                    {
+                        record = score;
+                        recordTextBlock.Text = "Record: " + score;
+                    }
                     scoreTextBlock.Text = "score: " + score;
                 }
 
@@ -125,11 +131,14 @@ namespace GameCenter.Projects.CarGame
             if (isGameOver)
             {
                 backgroundVideo.Stop();
-                score = 0;
-                scoreTextBlock.Text = "score: " + score;
-                MessageBoxResult result = MessageBox.Show("Game Over! Would you like to play again?", "Game Over", MessageBoxButton.YesNo);
+                playerCar.LeftKeyPressed = false;
+                playerCar.RightKeyPressed = false;
+
+                MessageBoxResult result = MessageBox.Show($"Your Best Score is: {record} \n would you like to play again?", "Game Over", MessageBoxButton.YesNo);
                 if (result == MessageBoxResult.Yes)
                 {
+                    score = 0;
+                    scoreTextBlock.Text = "score: " + score;
                     foreach (var obstacle in obstacles)
                     {
                         gameCanvas.Children.Remove(obstacle.Representation);

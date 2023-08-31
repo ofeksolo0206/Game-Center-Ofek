@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using System.Windows;
 
-namespace GameCenter.Projects.MemoryGame.Model
+namespace GameCenter.Projects.MemoryGame.Models
 {
     public enum matchIconProf
     {
@@ -30,7 +30,8 @@ namespace GameCenter.Projects.MemoryGame.Model
         public int counter = 0;
         public int[] pressed = new int[2];
         public bool[] opened = new bool[16];
-            
+        public int attempts = 15;
+
 
         //initializing the buttons array
         public memoryGame(Button[] box, int[] TArray)
@@ -44,8 +45,8 @@ namespace GameCenter.Projects.MemoryGame.Model
                 box[i].Content = "";
             }
         }
-            //add image to the clicked button
-            public StackPanel SetImage(matchIconProf test)
+        //add image to the clicked button
+        public StackPanel SetImage(matchIconProf test)
         {
             Image img = new Image();
             StackPanel stackPnl = new StackPanel();
@@ -67,27 +68,41 @@ namespace GameCenter.Projects.MemoryGame.Model
             counter++;
             if (counter == 2)
             {
-                ButtonCompare(pressed[0], pressed[1]);
+              bool flag =  ButtonCompare(pressed[0], pressed[1]);
+                if (flag == false)
+                {
+
+                    attempts--;
+                    if (attempts == 0)
+                    {
+                        MessageBox.Show($"Game Over!\n To play again click the Restart Button");
+                        xBox[pressed[0]].Content = "";
+                        xBox[pressed[1]].Content = "";
+                    }
+                }
             }
         }
 
         //compare between 2 cards: match = keep them open / unmatch = clear their content
-        public void ButtonCompare(int check1, int check2)
+        public bool ButtonCompare(int check1, int check2)
         {
-
+            bool matching;
             if (testarray[check1] == testarray[check2])
             {
-                pairsCounter++;
+                matching = true;
+                pairsCounter += 1;
                 opened[check1] = true;
                 opened[check2] = true;
                 if (pairsCounter == 8)
                 {
-                    MessageBox.Show("You Won!!!!!");
+                    MessageBox.Show($"You won!\n To play again click the restart Button");
+
                 }
                 counter = 0;
             }
             else
             {
+                matching = false;
                 var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(0.5) };
                 timer.Start();
                 timer.Tick += (sender, args) =>
@@ -97,7 +112,9 @@ namespace GameCenter.Projects.MemoryGame.Model
                     xBox[check2].Content = "";
                     counter = 0;
                 };
+
             }
+            return matching;
         }
 
 

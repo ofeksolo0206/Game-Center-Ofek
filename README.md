@@ -3,6 +3,10 @@
 Welcome to our comprehensive Game Center Project on Windows Presentation Foundation (WPF)! This project comprises various mini-projects, including a robust User Management System, a useful To-Do list, and several engaging games, as well as a currency converter program. 
 
 
+## Home Page
+when running the project you'll first see the home page which contains icons represent all the mini-projects.
+By clicking an icons you'll enter the mini-project presentation page which contains a simple explanation of how to use the program.
+
 ## Included Projects in this WPF Game Center:
 
 ### 1. User Management System
@@ -42,4 +46,9 @@ To install, ensure that you have Visual Studio properly set up and .NET Framewor
 
 Feel free to contribute to this Game Center Project. We appreciate contributions of any kind - from patching typos in the code to developing new games.
 
-We hope you enjoy this comprehensive WPF Game Center - Happy gaming!
+
+## Contact
+
+If you have any questions, suggestions, or feedback, please feel free to contact me at my mail: ofekifargan3@gmail.com.
+
+Hope you enjoy this comprehensive WPF Game Center - Happy gaming!

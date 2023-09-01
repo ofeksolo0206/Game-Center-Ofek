@@ -4,7 +4,7 @@ Welcome to our comprehensive Game Center Project on Windows Presentation Foundat
 
 
 ## Home Page
-- when running the project you'll first see the home page which contains icons represent all the mini-projects.
+- When running the project you'll first see the home page which contains icons represent all the mini-projects.
 - By clicking an icons you'll enter the mini-project presentation page which contains a simple explanation of how to use the program.
 
 ## Included Projects in this WPF Game Center:

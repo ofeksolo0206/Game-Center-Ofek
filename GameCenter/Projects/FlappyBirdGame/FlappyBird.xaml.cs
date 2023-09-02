@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameCenter.Projects.FlappyBirdGame.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,28 +23,23 @@ namespace GameCenter.Projects.FlappyBirdGame
     {
         DispatcherTimer gameTimer = new DispatcherTimer();
 
-        double score;
-        double record;
-        bool isNewRecord = false;
-        int gravity = 8;
-        bool gameOver;
-        Rect flappyBirdHitBox;
+        FlappyBirdModel flappyBird = new FlappyBirdModel();
         public FlappyBird()
         { 
             InitializeComponent();
 
             gameTimer.Tick += MainEventTimer;
-            gameTimer.Interval = TimeSpan.FromMilliseconds(30);
+            gameTimer.Interval = TimeSpan.FromMilliseconds(25);
             StartGame();
         }
 
         private void MainEventTimer(object? sender, EventArgs e)
         {
-            ScoreText.Content = "Score: " + score;
-            RecordText.Content = "Record: "+ record;
+            ScoreText.Content = "Score: " + flappyBird.score;
+            RecordText.Content = "Record: "+ flappyBird.record;
 
-            flappyBirdHitBox = new Rect(Canvas.GetLeft(Bird), Canvas.GetTop(Bird), Bird.Width - 30, Bird.Height ) ;
-            Canvas.SetTop(Bird, Canvas.GetTop(Bird) + gravity);
+            flappyBird.birdHitBox = new Rect(Canvas.GetLeft(Bird), Canvas.GetTop(Bird), Bird.Width - 30, Bird.Height ) ;
+            Canvas.SetTop(Bird, Canvas.GetTop(Bird) + flappyBird.gravity);
 
             if(Canvas.GetTop(Bird) < -10|| Canvas.GetTop(Bird) > 458)
             {
@@ -59,17 +55,17 @@ namespace GameCenter.Projects.FlappyBirdGame
                     if(Canvas.GetLeft(x) < -100)
                     {
                         Canvas.SetLeft(x, 800);
-                        score += .5;
-                        if(score > record)
+                        flappyBird.score += .5;
+                        if(flappyBird.score > flappyBird.record)
                         {
-                            record = score;
-                            isNewRecord = true;
+                            flappyBird.record = flappyBird.score;
+                            flappyBird.isNewRecord = true;
                         }
                     }
 
                     Rect pipeHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
 
-                    if (flappyBirdHitBox.IntersectsWith(pipeHitBox))
+                    if (flappyBird.birdHitBox.IntersectsWith(pipeHitBox))
                     {
                         EndGame();
                     }
@@ -94,10 +90,10 @@ namespace GameCenter.Projects.FlappyBirdGame
             if (e.Key == Key.Space)
             {
                 Bird.RenderTransform = new RotateTransform(-20, Bird.Width / 2, Bird.Height / 2);
-                gravity = -8;
+                flappyBird.gravity = -8;
             }
 
-            if (e.Key == Key.R && gameOver == true)
+            if (e.Key == Key.R && flappyBird.gameOver == true)
             {
                 StartGame();
             }
@@ -108,17 +104,16 @@ namespace GameCenter.Projects.FlappyBirdGame
             if(e.Key == Key.Space)
             {
                 Bird.RenderTransform = new RotateTransform(5, Bird.Width/2, Bird.Height/2);
-                gravity = 8;
+                flappyBird.gravity = 8;
             }
         }
 
         private void StartGame()
         {
+            flappyBird.gameOver = false;
+            flappyBird.score = 0;
             GameCanvas.Focus();
             int temp = 300;
-            score = 0;
-            isNewRecord = false;
-            gameOver = false;
             Canvas.SetTop(Bird, 190);
 
             foreach(var x in GameCanvas.Children.OfType<Image>())
@@ -148,11 +143,11 @@ namespace GameCenter.Projects.FlappyBirdGame
         private void EndGame()
         {
             gameTimer.Stop();
-            gameOver = true;
+            flappyBird.gameOver = true;
             ScoreText.Content = "Game Over! Press R to try again";
-            if (isNewRecord)
+            if (flappyBird.isNewRecord)
             {
-                RecordText.Content = $"Record: {record}. New Record Achived!";
+                RecordText.Content = $"Record: {flappyBird.record}. New Record Acheived!";
             } 
         }
     }

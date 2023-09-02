@@ -40,10 +40,10 @@ namespace GameCenter.Projects.ToDoList
         {
             if(e.ClickCount == 2)
             {
-                TextBlock textBlock = sender as TextBlock;
-                StackPanel parent = textBlock.Parent as StackPanel;
-                TextBox editTextBox = parent.FindName("editTaskDescription") as TextBox;
-                Button btnSave = parent.FindName("btnSave") as Button;
+                TextBlock ? textBlock = sender as TextBlock;
+                StackPanel ? parent = textBlock.Parent as StackPanel;
+                TextBox ? editTextBox = parent.FindName("editTaskDescription") as TextBox;
+                Button ? btnSave = parent.FindName("btnSave") as Button;
 
                 textBlock.Visibility = Visibility.Collapsed;
                 editTextBox.Visibility = Visibility.Visible;
@@ -72,11 +72,11 @@ namespace GameCenter.Projects.ToDoList
 
         private void OnSaveEdit(object sender, RoutedEventArgs e)
         {
-            Button btnSave = sender as Button;
-            StackPanel parent = btnSave.Parent as StackPanel;
-            TextBox editTextBox = parent.FindName("editTaskDescription") as TextBox;
-            TextBlock textBlock = parent.FindName("txtTaskDescription") as TextBlock;
-            ToDoTask task = editTextBox.DataContext as ToDoTask;
+            Button ? btnSave = sender as Button;
+            StackPanel ? parent = btnSave.Parent as StackPanel;
+            TextBox ? editTextBox = parent.FindName("editTaskDescription") as TextBox;
+            TextBlock ? textBlock = parent.FindName("txtTaskDescription") as TextBlock;
+            ToDoTask ? task = editTextBox.DataContext as ToDoTask;
 
             btnSave.Visibility = Visibility.Collapsed;
             editTextBox.Visibility = Visibility.Collapsed;

@@ -146,14 +146,16 @@ namespace GameCenter
             Project1 project1 = new();
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Users Managment System", "" +
-                "Welcome to my Users-Managment Program. " +
-                "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
-                "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
-                "It has survived not only five centuries, but also the leap into electronic typesetting, " +
-                "remaining essentially unchanged. " +
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
-                "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker " +
-                "including versions of Lorem Ipsum.",
+                "- This is a Users-Managment Program." +
+                "- The Technologies i used this project: C#, .NET.\n\n" +
+
+                "- when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n" +
+                "- It has survived not only five centuries, but also the leap into electronic typesetting,\n" +
+                "- remaining essentially unchanged.\n" +
+                "- It was popularised in the 1960s with the release of Letraset sheets containing Lorem\n" +
+
+                "- To Start the program click the Image.\n" +
+                "- To Return the Home Page click the user's avatar on the header.",
                 Image1.Source,
                 project1
                 );
@@ -169,14 +171,16 @@ namespace GameCenter
             TodoList todoList = new();
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("To-Do List Program", "" +
-                "This is a To-do List Project. " +
-                "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
-                "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
-                "It has survived not only five centuries, but also the leap into electronic typesetting, " +
-                "remaining essentially unchanged. " +
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
-                "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker " +
-                "including versions of Lorem Ipsum.",
+                "- This is a To-do List Project.\n" +
+                "- The Technologies i used this project: C#, .NET.\n\n" +
+
+                "- The application will help you manage your schedule by organizing all tasks in one place.\n" +
+                "- You can edit your tasks, add new or mark as complete your to-do missions.\n" +
+                "- To edit task double click the task, then edit and click the save button.\n" +
+                "- To create new task double click the 'enter new task' text box on the bottom of the page, then click the save button.\n\n" +
+
+                "- To Start the program click the Image.\n" +
+                "- To Return the Home Page click the user's avatar on the header.",
                 Image2.Source,
                 todoList
                 );
@@ -192,14 +196,16 @@ namespace GameCenter
             Tic_tac_toe tic_tac_toe = new();
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Tic Tac Toe Game", "" +
-                "Welcome to my Users-Managmant. " +
-                "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
-                "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
-                "It has survived not only five centuries, but also the leap into electronic typesetting, " +
-                "remaining essentially unchanged. " +
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
-                "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker " +
-                "including versions of Lorem Ipsum.",
+                "- This is a classic Tic Tac Toe Game.\n" +
+                "- The Technologies i used this project: C#, .Net, Threadings Library.\n\n" +
+
+                "- This game you'll play againts the computer.\n" +
+                "- To play click one of the buttons on the panel.\n" +
+                "- The winner is the first one to reach 3 buttons in a row of is symbol (X/O).\n" +
+                "- Each win will add to the player/computer score.\n\n" +
+
+                "- To Start the program click the Image.\n" +
+                "- To Return the Home Page click the user's avatar on the header.",
                 Image3.Source,
                 tic_tac_toe
                 );
@@ -215,14 +221,16 @@ namespace GameCenter
             FlappyBird flappyBird = new();
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Flappy Bird Game", "" +
-                "Welcome to my Users-Managmant. " +
-                "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
-                "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
-                "It has survived not only five centuries, but also the leap into electronic typesetting, " +
-                "remaining essentially unchanged. " +
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
-                "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker " +
-                "including versions of Lorem Ipsum.",
+                "- This is My version of the original Flappy Bird Game.\n" +
+                "- The Technologies i used this project: C#, .Net, Threadings and Controls Libraries.\n\n" +
+
+                "- Your mission is to avoid the pipes and reach the highest score you can.\n" +
+                "- To control the bird vertical location click rapidly the Press key on your key board\n" +
+                "- The game will over when you first hit the pipe.\n" +
+                "- To play again click the 'R' key.\n\n" +
+
+                "- To Start the program click the Image.\n" +
+                "- To Return the Home Page click the user's avatar on the header.",
                 Image4.Source,
                 flappyBird
                 );
@@ -238,14 +246,16 @@ namespace GameCenter
             CarGame carGame = new();
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Car Game", "" +
-                "Welcome to my Users-Managmant. " +
-                "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
-                "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
-                "It has survived not only five centuries, but also the leap into electronic typesetting, " +
-                "remaining essentially unchanged. " +
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
-                "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker " +
-                "including versions of Lorem Ipsum.",
+                "- This is a Car avoiding bombs game.\n" +
+                "- The Technologies i used this project: C#, .Net, Threadings and Controls Libraries.\n\n" +
+
+                "- Your mission is to avoid all the bombs and reach the highest score.\n" +
+                "- Every Bomb you dodged and got out of the window will add to your score\n" +
+                "- To move the car press the right and left keys on your key board \n" +
+                "- The game will over on the first time you hit a bomb and your score will reset\n\n" +
+
+                "- To Start the program click the Image.\n" +
+                "- To Return the Home Page click the user's avatar on the header.",
                 Image5.Source,
                 carGame
                 );
@@ -260,18 +270,21 @@ namespace GameCenter
         //{
         //    CurrencyConvertorView currencyConvertor = new();
         //    projectPresentetationPage presentetion = new();
-        //     presentetion.OnStart("Currency Convertor Program", "" +
-        //        "Welcome to my Users-Managmant. " +
-        //        "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
-        //        "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
-        //        "It has survived not only five centuries, but also the leap into electronic typesetting, " +
-        //        "remaining essentially unchanged. " +
-        //        "It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
-        //        "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker " +
-        //        "including versions of Lorem Ipsum.",
-        //        Image6.Source,
-        //        currencyConvertor
-        //        );
+        //    presentetion.OnStart("Currency Convertor Program", "" +
+        //        "- This is a Currencies Convertor Project.\n" +
+        //        "- The Technologies i used this project: C#, .Net, JSON, API.\n\n" +
+
+        //        "- This project will show you the value of money you convert by the currencies on that exact day.\n" +
+        //        "- My Program communicate with a currencies api to get the updated currencies every day.\n" +
+        //        "- Enter the amount to convert and the currencies to see the exchange.\n" +
+        //        "- Notice my api key is encoded so make sure you enter my key by the instructors i send your mail.\n" +
+        // 8080227d8b217edccc9bdddb0c67a550
+
+        //        "- To Start the program click the Image.\n" +
+        //        "- To Return the Home Page click the user's avatar on the header.",
+        //       Image6.Source,
+        //       currencyConvertor
+        //       );
         //    Hide();
         //    presentetion.ShowDialog();
         //    ShowDialog();
@@ -284,14 +297,16 @@ namespace GameCenter
             MemoryGame memoryGame = new();
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Memory Game", "" +
-                "Welcome to my Users-Managmant. " +
-                "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
-                "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
-                "It has survived not only five centuries, but also the leap into electronic typesetting, " +
-                "remaining essentially unchanged. " +
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
-                "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker " +
-                "including versions of Lorem Ipsum.",
+                "- This is a Heros Memory Game. \n" +
+                "- The Technologies i used this project: C#, .Net, Threadings Library.\n\n" +
+
+                "- To Start playing press the Restart Game Button, then click the buttons on the panel to flip them.\n" +
+                "- To win you'll need to find all the 8 heros pairs.\n" +
+                "- Pay attention that every click on the Restart Button will reset the game and the attempts left.\n" +
+                "- Notice you have only 15 attempts so pick the cards wisely.\n\n" +
+
+                "- To Start the program click the Image.\n" +
+                "- To Return the Home Page click the user's avatar on the header.",
                 Image7.Source,
                 memoryGame
                 );
@@ -307,14 +322,16 @@ namespace GameCenter
             SaimonGame saimonGame = new();
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Simon Game", "" +
-                "Welcome to my Users-Managmant. " +
-                "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
-                "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
-                "It has survived not only five centuries, but also the leap into electronic typesetting, " +
-                "remaining essentially unchanged. " +
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
-                "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker " +
-                "including versions of Lorem Ipsum.",
+                "- This is a Classic Simon Game. \n" +
+                "- The Technologies i used this project: C#, .Net, Threadings Library.\n\n" +
+
+                "- This game will test your memory by remembering a random sequence of colors.\n" +
+                "- To Start the Simon click the Start Game and a press of one of the color will add to the current sequence.\n" +
+                "- When the Simon finishs click the colors by the exact sequence played.\n" +
+                "- If you'll click an different button then the Simon sequence the game will Stop and your score will reset.\n\n" +
+
+                "- To Start the program click the Image.\n" +
+                "- To Return the Home Page click the user's avatar on the header.",
                 Image8.Source,
                 saimonGame
                 );
@@ -330,14 +347,16 @@ namespace GameCenter
             SniperShootingGame sniperShootingGame = new();
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Sniper Shooting Game", "" +
-                "Welcome to my Users-Managmant. " +
-                "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
-                "when an unknown printer took a galley of type and scrambled it to make a type specimen book. " +
-                "It has survived not only five centuries, but also the leap into electronic typesetting, " +
-                "remaining essentially unchanged. " +
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem " +
-                "Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker " +
-                "including versions of Lorem Ipsum.",
+                "- This is a Sniper Shooting Game. \n" +
+                "- The Technologies i used this project: C#, .Net, Threadings and Controls Libraries.\n\n" +
+
+                "- On this Game you'll test your insticts on a gun range\n" +
+                "- When entering the game a dummies will pop-up randomly on a windows.\n" +
+                "- Every dummy you hit will increase your score, but every dummy you miss will add to your misses count.\n" +
+                "- The game will over when your misses score will reach 10.\n\n" +
+
+                "- To Start the program click the Image.\n" +
+                "- To Return the Home Page click the user's avatar on the header.",
                 Image9.Source,
                 sniperShootingGame
                 );
@@ -351,6 +370,3 @@ namespace GameCenter
 
     }
 }
-
-
-//https://github.com/TzachLectures/PlayCenter

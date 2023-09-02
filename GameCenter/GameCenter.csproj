@@ -15,6 +15,10 @@
     <None Remove="Images\memoryGame.png" />
     <None Remove="Images\saimonGame.png" />
     <None Remove="Images\sniperShootingGame.png" />
+    <None Remove="Images\TechnologiesIcons\.netIcon.png" />
+    <None Remove="Images\TechnologiesIcons\apiIcon.png" />
+    <None Remove="Images\TechnologiesIcons\c#Icon.png" />
+    <None Remove="Images\TechnologiesIcons\jsonIcon.png" />
     <None Remove="Images\tic-tac-toe.png" />
     <None Remove="Images\todoList.png" />
     <None Remove="Images\userManagement.png" />
@@ -54,22 +58,26 @@
 
   <ItemGroup>
     <Resource Include="Images\man.png" />
-    <Resource Include="Images\sniperShootingGame.png" />
-    <Resource Include="Images\tic-tac-toe.png" />
+    <Resource Include="Images\ProjectsIcons\sniperShootingGame.png" />
+    <Resource Include="Images\ProjectsIcons\tic-tac-toe.png" />
+    <Resource Include="Images\TechnologiesIcons\.netIcon.png" />
+    <Resource Include="Images\TechnologiesIcons\apiIcon.png" />
+    <Resource Include="Images\TechnologiesIcons\c#Icon.png" />
+    <Resource Include="Images\TechnologiesIcons\jsonIcon.png" />
     <Resource Include="Projects\SniperShootingGame\Assets\background.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\todoList.png" />
+    <Resource Include="Images\ProjectsIcons\todoList.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\carGame.png" />
-    <Resource Include="Images\currencyConvertor.png" />
-    <Resource Include="Images\flappyBird.png" />
-    <Resource Include="Images\memoryGame.png" />
-    <Resource Include="Images\saimonGame.png" />
-    <Resource Include="Images\userManagement.png" />
+    <Resource Include="Images\ProjectsIcons\carGame.png" />
+    <Resource Include="Images\ProjectsIcons\currencyConvertor.png" />
+    <Resource Include="Images\ProjectsIcons\flappyBird.png" />
+    <Resource Include="Images\ProjectsIcons\memoryGame.png" />
+    <Resource Include="Images\ProjectsIcons\saimonGame.png" />
+    <Resource Include="Images\ProjectsIcons\userManagement.png" />
     <Resource Include="Projects\FlappyBirdGame\Assets\pipeBottom.png" />
     <Resource Include="Projects\FlappyBirdGame\Assets\pipeTop.png" />
   </ItemGroup>

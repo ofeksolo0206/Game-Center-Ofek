@@ -26,9 +26,9 @@ namespace GameCenter.Projects.MemoryGame
             InitializeComponent();
         }
         memoryGame? currentGame;
-        Button[] buttons = new Button[16];
-        Random random = new Random();
-        int[] doubleIndexArray = new int[16];
+        readonly Button[] buttons = new Button[16];
+        readonly Random random = new Random();
+        readonly int[] doubleIndexArray = new int[16];
 
 
         private void StartButton(object sender, RoutedEventArgs e)

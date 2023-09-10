@@ -1,5 +1,6 @@
 ﻿using GameCenter.Projects.Project1.Models;
 using GameCenter.Projects.Project1.Utilities;
+using GameCenter.Projects.UsersManagment.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace GameCenter.Projects.Project1
     public partial class Project1 : Window
     {
         private readonly UsersListHandler _listHandler;
-        private readonly List<User> _users;
+        private readonly List<User1> _users;
 
         private int _selectedUserId;
         public Project1()
@@ -33,10 +34,10 @@ namespace GameCenter.Projects.Project1
                 MessageBox.Show("Email Already Taken!");
                 return;
             }
-            if (CheckFields() && Validate.UserName(UserName) && Validate.Email(UserEmail)) 
-            { 
+            if (CheckFields() && Validate.UserName(UserName) && Validate.Email(UserEmail))
+            {
                 _listHandler.AddUser(
-                    new User(_users.Count + 1, UserName.Text, UserEmail.Text)
+                    new User1(_users.Count + 1 ,UserName.Text, UserEmail.Text)
                 );
 
                 UpdateGrid();
@@ -52,6 +53,7 @@ namespace GameCenter.Projects.Project1
             }
             _listHandler.RemoveUser(_selectedUserId - 1);
             UpdateGrid();
+            ClearFields();
         }
         private void On_Update_Button_Click(object sender, RoutedEventArgs e)
         {
@@ -61,7 +63,7 @@ namespace GameCenter.Projects.Project1
                 return;
             }
             _listHandler.UpdateUser(
-                new User(_selectedUserId, UserName.Text, UserEmail.Text)
+                new User1(_selectedUserId, UserName.Text, UserEmail.Text)
             );
 
             UpdateGrid();
@@ -136,9 +138,9 @@ namespace GameCenter.Projects.Project1
 
         private bool CheckFields()
         {
-            if (UserName.Text == String.Empty || 
+            if (UserName.Text == String.Empty ||
                 UserName.Text == null ||
-                UserEmail.Text == String.Empty || 
+                UserEmail.Text == String.Empty ||
                 UserEmail.Text == null)
             {
                 MessageBox.Show("Please Fill All Details!");

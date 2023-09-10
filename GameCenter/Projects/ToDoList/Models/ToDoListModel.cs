@@ -39,17 +39,5 @@ namespace GameCenter.Projects.ToDoList.Models
             }
             else throw new Exception("the task with this id didn't found");
         }
-
-        //properties
-        //List of tasks - ObservableCollection
-
-        //methods
-        //Constructor
-        //Update Task
-        //ToggleTaskIsComplete
-        //AddNewTask
-
-
-
     }
 }

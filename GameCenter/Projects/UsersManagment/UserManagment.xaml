@@ -1,0 +1,83 @@
+﻿<Window x:Class="GameCenter.Projects.UsersManagment.UserManagment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameCenter.Projects.UsersManagment"
+        mc:Ignorable="d"
+        Title="UserManagment" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="0.5*" />
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="MainContainer" Grid.Row="0">
+
+            <Label 
+                x:Name="Label_Title" 
+                Content=" Users Manager"
+                Background="AliceBlue"
+                FontWeight="Bold"
+                FontSize="23"
+                HorizontalContentAlignment="Center"
+            />
+            <StackPanel Width="300">
+                <Label Content="User Name:"/>
+                <TextBox 
+                x:Name="Input_UserName"
+                BorderThickness="1,1,1,3"
+                Height="25"
+                >
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5" />
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+            <StackPanel Width="300">
+                <Label Content="User Email:"/>
+                <TextBox 
+                    x:Name="Input_Email"
+                    BorderThickness="1,1,1,3"
+                    Height="25"
+                    >
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5" />
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+            <DataGrid x:Name="DataGrid1" SelectedCellsChanged="RowSelected" SelectionChanged="DataGrid1_SelectionChanged" />
+            <StackPanel>
+                <Button 
+    x:Name="AddButton"
+    Content="Add"
+    Width="80"
+    Height="30"
+    BorderThickness="0"
+    Background= "#FF88D289"
+    Margin="10,30,20,30" Click="Btn_Add_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button 
+     x:Name="RemoveButton"
+     Content="Remove"
+     BorderThickness="0"
+     Width="80"
+     Margin="0,30,0,30" Click="Btn_Remove_Click" Background="#FFD26B6B">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

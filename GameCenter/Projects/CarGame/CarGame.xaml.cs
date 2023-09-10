@@ -122,7 +122,7 @@ namespace GameCenter.Projects.CarGame
                 {
                     // End the game
 
-                    (sender as DispatcherTimer).Stop();
+                    (sender as DispatcherTimer)!.Stop();
                     isGameOver = true;
                     break;
                 }
@@ -147,7 +147,7 @@ namespace GameCenter.Projects.CarGame
                     obstacles.Clear();
                     playerCar.X = 200;
                     playerCar.Y = 300;
-                    (sender as DispatcherTimer).Start();
+                    (sender as DispatcherTimer)!.Start();
                     backgroundVideo.Play();
 
                 }

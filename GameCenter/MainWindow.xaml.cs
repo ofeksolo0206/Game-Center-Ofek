@@ -23,12 +23,10 @@ using GameCenter.Projects.MemoryGame;
 using GameCenter.Projects.SaimonGame;
 using GameCenter.Projects.SniperShootingGame;
 using GameCenter.Projects;
+using GameCenter.Projects.UsersManagment;
 
 namespace GameCenter
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -76,83 +74,20 @@ namespace GameCenter
         {
             Close();
         }
-        //private void Image1_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        //{
-        //    Project1 project1 = new();
-        //    Hide();
-        //    project1.ShowDialog();
-        //    Show();
-        //}
-
-        //private void Image2_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        //{
-        //    TodoList todoList = new();
-        //    Hide();
-        //    todoList.ShowDialog();
-        //    Show();
-        //}
-
-        //private void Image3_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        //{
-        //    tic_tac_toe tic = new();
-        //    Hide();
-        //    tic.ShowDialog();
-        //    Show();
-        //}
-
-        //private void Image4_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        //{
-        //    FlappyBird flappyBird = new();
-        //    Hide();
-        //    flappyBird.ShowDialog();
-        //    Show();
-        //}
-
-        //private void Image5_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        //{
-        //    CarGame car = new();
-        //    Hide();
-        //    car.ShowDialog();
-        //    Show();
-        //}
-
-        private async void Image6_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            CurrencyConvertorView currencyConvertor = new();
-            await currencyConvertor.InitializeAsync();
-            Hide();
-            currencyConvertor.ShowDialog();
-            Show();
-        }
-
-        //private void Image7_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        //{
-        //    MemoryGame memoryGame = new();
-        //    Hide();
-        //    memoryGame.ShowDialog();
-        //    Show();
-        //}
-
-        //private void Image8_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        //{
-        //    SaimonGame saimon = new();
-        //    Hide();
-        //    saimon.ShowDialog();
-        //    Show();
-        //}
 
         private void Image1_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            Project1 project1 = new();
-            projectPresentetationPage presentetion = new();
-            presentetion.OnStart("Users Managment System", "" +
-                "- This is a Users-Managment Program." +
+           Project1 project1 = new();
+           // UserManagment project1 = new UserManagment();// (the unfinished project)
+            projectPresentetationPage presentetation = new();
+            presentetation.OnStart("Users Managment System", "" +
+                "- This is a Users-Managment Program.\n" +
                 "- The Technologies i used this project: C#, .NET.\n\n" +
 
-                "- when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n" +
-                "- It has survived not only five centuries, but also the leap into electronic typesetting,\n" +
-                "- remaining essentially unchanged.\n" +
-                "- It was popularised in the 1960s with the release of Letraset sheets containing Lorem\n" +
+                "- This Program will help you manage all the users on your website.\n" +
+                "- You can add/delete/edit all your users's name and email.\n" +
+                "- You can also sign-in/out your users.\n" +
+                "- In addition you can decide to freeze-up/down any of the accounts.\n\n" +
 
                 "- To Start the program click the Image.\n" +
                 "- To Return the Home Page click the user's avatar on the header.",
@@ -160,9 +95,9 @@ namespace GameCenter
                 project1
                 );
             Hide();
-            presentetion.ShowDialog();
+            presentetation.ShowDialog();
             ShowDialog();
-            presentetion.Close();
+            presentetation.Close();
             project1.Close();
         }
 
@@ -197,7 +132,7 @@ namespace GameCenter
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Tic Tac Toe Game", "" +
                 "- This is a classic Tic Tac Toe Game.\n" +
-                "- The Technologies i used this project: C#, .Net, Threadings Library.\n\n" +
+                "- The Technologies i used this project: C#, .Net, Task.Delay.\n\n" +
 
                 "- This game you'll play againts the computer.\n" +
                 "- To play click one of the buttons on the panel.\n" +
@@ -222,7 +157,7 @@ namespace GameCenter
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Flappy Bird Game", "" +
                 "- This is My version of the original Flappy Bird Game.\n" +
-                "- The Technologies i used this project: C#, .Net, Threadings and Controls Libraries.\n\n" +
+                "- The Technologies i used this project: C#, .Net, Time Dispatcher and the Controls Library.\n\n" +
 
                 "- Your mission is to avoid the pipes and reach the highest score you can.\n" +
                 "- To control the bird vertical location click rapidly the Press key on your key board\n" +
@@ -247,7 +182,7 @@ namespace GameCenter
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Car Game", "" +
                 "- This is a Car avoiding bombs game.\n" +
-                "- The Technologies i used this project: C#, .Net, Threadings and Controls Libraries.\n\n" +
+                "- The Technologies i used this project: C#, .Net, Time Dispatcher and the Controls Library.\n\n" +
 
                 "- Your mission is to avoid all the bombs and reach the highest score.\n" +
                 "- Every Bomb you dodged and got out of the window will add to your score\n" +
@@ -266,31 +201,33 @@ namespace GameCenter
             carGame.Close();
         }
 
-        //private void Image6_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        //{
-        //    CurrencyConvertorView currencyConvertor = new();
-        //    projectPresentetationPage presentetion = new();
-        //    presentetion.OnStart("Currency Convertor Program", "" +
-        //        "- This is a Currencies Convertor Project.\n" +
-        //        "- The Technologies i used this project: C#, .Net, JSON, API.\n\n" +
+        private async void Image6_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
 
-        //        "- This project will show you the value of money you convert by the currencies on that exact day.\n" +
-        //        "- My Program communicate with a currencies api to get the updated currencies every day.\n" +
-        //        "- Enter the amount to convert and the currencies to see the exchange.\n" +
-        //        "- Notice my api key is encoded so make sure you enter my key by the instructors i send your mail.\n" +
-        // 8080227d8b217edccc9bdddb0c67a550
 
-        //        "- To Start the program click the Image.\n" +
-        //        "- To Return the Home Page click the user's avatar on the header.",
-        //       Image6.Source,
-        //       currencyConvertor
-        //       );
-        //    Hide();
-        //    presentetion.ShowDialog();
-        //    ShowDialog();
-        //    presentetion.Close();
-        //    currencyConvertor.Close();
-        //}
+            CurrencyConvertorView currencyconvertor = new();
+            await currencyconvertor.InitializeAsync();
+            projectPresentetationPage presentetion = new();
+            presentetion.OnStart("currency convertor program", "" +
+                "- This is a currencies convertor project.\n" +
+                "- The technologies i used this project: C#, .Net, Async, Json, Api.\n\n" +
+
+                "- This project will show you the value of money you convert by the currencies on that exact day.\n" +
+                "- My program communicate with a currencies api to get the updated currencies every day.\n" +
+                "- Enter the amount to convert and the currencies to see the exchange.\n" +
+                "- Notice my api key is encoded so make sure you enter my key by the instructions i send you mail.\n" +
+
+                "- To start the program click the image.\n" +
+                "- To return the home page click the user's avatar on the header.",
+               Image6.Source,
+               currencyconvertor
+               );
+            Hide();
+            presentetion.ShowDialog();
+            ShowDialog();
+            presentetion.Close();
+            currencyconvertor.Close();
+        }
 
         private void Image7_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
@@ -298,7 +235,7 @@ namespace GameCenter
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Memory Game", "" +
                 "- This is a Heros Memory Game. \n" +
-                "- The Technologies i used this project: C#, .Net, Threadings Library.\n\n" +
+                "- The Technologies i used this project: C#, .Net, Time Dispatcher.\n\n" +
 
                 "- To Start playing press the Restart Game Button, then click the buttons on the panel to flip them.\n" +
                 "- To win you'll need to find all the 8 heros pairs.\n" +
@@ -323,7 +260,7 @@ namespace GameCenter
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Simon Game", "" +
                 "- This is a Classic Simon Game. \n" +
-                "- The Technologies i used this project: C#, .Net, Threadings Library.\n\n" +
+                "- The Technologies i used this project: C#, .Net, Task.Delay.\n\n" +
 
                 "- This game will test your memory by remembering a random sequence of colors.\n" +
                 "- To Start the Simon click the Start Game and a press of one of the color will add to the current sequence.\n" +
@@ -348,7 +285,7 @@ namespace GameCenter
             projectPresentetationPage presentetion = new();
             presentetion.OnStart("Sniper Shooting Game", "" +
                 "- This is a Sniper Shooting Game. \n" +
-                "- The Technologies i used this project: C#, .Net, Threadings and Controls Libraries.\n\n" +
+                "- The Technologies i used this project: C#, .Net, Time Dispatcher and the Controls Library.\n\n" +
 
                 "- On this Game you'll test your insticts on a gun range\n" +
                 "- When entering the game a dummies will pop-up randomly on a windows.\n" +

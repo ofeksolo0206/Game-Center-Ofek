@@ -65,35 +65,42 @@ namespace GameCenter.Projects.Tic_tac_toe
 
         private async void ComputerPlay()
         {
-            await Task.Delay(500);
-            GameModel.CurrentPlayer = 'O';
-            Random random = new Random();
-            int row,column;
-
-            do
+            try
             {
-                row = random.Next(3);
-                column = random.Next(3);
-            } while (GameModel.GameBoard[row, column] != '\0');
-            Button ? computerButton = FindButton(row, column);
+                await Task.Delay(500);
+                GameModel.CurrentPlayer = 'O';
+                Random random = new Random();
+                int row, column;
 
-            if(computerButton != null)
+                do
+                {
+                    row = random.Next(3);
+                    column = random.Next(3);
+                } while (GameModel.GameBoard[row, column] != '\0');
+                Button? computerButton = FindButton(row, column);
+
+                if (computerButton != null)
+                {
+                    computerButton.Content = GameModel.CurrentPlayer;
+                    GameModel.GameBoard[row, column] = GameModel.CurrentPlayer;
+                    if (GameModel.CheckForWin())
+                    {
+                        ComputerScore++;
+                        MessageBox.Show($"Computer Score: {ComputerScore} \n User Score: {UserScore}", "Game Over", MessageBoxButton.OK, MessageBoxImage.Information);
+                        ResetGame();
+                    }
+                    else
+                    {
+                        GameModel.CurrentPlayer = 'X';
+                    }
+
+
+
+                }
+            }
+            catch (Exception ex)
             {
-                computerButton.Content = GameModel.CurrentPlayer;
-                GameModel.GameBoard[row, column] = GameModel.CurrentPlayer;
-                if (GameModel.CheckForWin())
-                {
-                    ComputerScore++;
-                    MessageBox.Show($"Computer Score: {ComputerScore} \n User Score: {UserScore}", "Game Over", MessageBoxButton.OK, MessageBoxImage.Information);
-                    ResetGame();
-                }
-                else
-                {
-                    GameModel.CurrentPlayer = 'X';
-                }
-                
-
-                
+                MessageBox.Show($"Error Occured: {ex.Message}");
             }
         }
 

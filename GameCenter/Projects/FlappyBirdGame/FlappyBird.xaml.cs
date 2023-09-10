@@ -23,23 +23,23 @@ namespace GameCenter.Projects.FlappyBirdGame
     {
         DispatcherTimer gameTimer = new DispatcherTimer();
 
-        FlappyBirdModel flappyBird = new FlappyBirdModel();
+       FlappyBirdModel flappyBird = new FlappyBirdModel();
         public FlappyBird()
         { 
             InitializeComponent();
 
             gameTimer.Tick += MainEventTimer;
-            gameTimer.Interval = TimeSpan.FromMilliseconds(25);
+            gameTimer.Interval = TimeSpan.FromMilliseconds(20);
             StartGame();
         }
 
         private void MainEventTimer(object? sender, EventArgs e)
         {
-            ScoreText.Content = "Score: " + flappyBird.score;
-            RecordText.Content = "Record: "+ flappyBird.record;
+            ScoreText.Content = "Score: " + flappyBird.Score;
+            RecordText.Content = "Record: "+ flappyBird.Record;
 
-            flappyBird.birdHitBox = new Rect(Canvas.GetLeft(Bird), Canvas.GetTop(Bird), Bird.Width - 30, Bird.Height ) ;
-            Canvas.SetTop(Bird, Canvas.GetTop(Bird) + flappyBird.gravity);
+            flappyBird.SetBirdPosition(Bird);
+            Canvas.SetTop(Bird, Canvas.GetTop(Bird) + flappyBird.Gravity);
 
             if(Canvas.GetTop(Bird) < -10|| Canvas.GetTop(Bird) > 458)
             {
@@ -55,17 +55,16 @@ namespace GameCenter.Projects.FlappyBirdGame
                     if(Canvas.GetLeft(x) < -100)
                     {
                         Canvas.SetLeft(x, 800);
-                        flappyBird.score += .5;
-                        if(flappyBird.score > flappyBird.record)
+                        flappyBird.Score += .5;
+                        if(flappyBird.CheckForNewRecord() == true)
                         {
-                            flappyBird.record = flappyBird.score;
-                            flappyBird.isNewRecord = true;
+                            RecordText.Content = $"Record: {flappyBird.Record}";
                         }
                     }
 
                     Rect pipeHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
 
-                    if (flappyBird.birdHitBox.IntersectsWith(pipeHitBox))
+                    if (flappyBird.BirdHitBox.IntersectsWith(pipeHitBox))
                     {
                         EndGame();
                     }
@@ -85,40 +84,17 @@ namespace GameCenter.Projects.FlappyBirdGame
         
         }
 
-        private void KeyIsDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Space)
-            {
-                Bird.RenderTransform = new RotateTransform(-20, Bird.Width / 2, Bird.Height / 2);
-                flappyBird.gravity = -8;
-            }
-
-            if (e.Key == Key.R && flappyBird.gameOver == true)
-            {
-                StartGame();
-            }
-        }
-
-        private void KeyIsUp(object sender, KeyEventArgs e)
-        {
-            if(e.Key == Key.Space)
-            {
-                Bird.RenderTransform = new RotateTransform(5, Bird.Width/2, Bird.Height/2);
-                flappyBird.gravity = 8;
-            }
-        }
-
         private void StartGame()
         {
-            flappyBird.gameOver = false;
-            flappyBird.score = 0;
+            flappyBird.IsGameOver = false;
+            flappyBird.Score = 0;
             GameCanvas.Focus();
             int temp = 300;
             Canvas.SetTop(Bird, 190);
 
-            foreach(var x in GameCanvas.Children.OfType<Image>())
+            foreach (var x in GameCanvas.Children.OfType<Image>())
             {
-                if((string)x.Tag == "obs1")
+                if ((string)x.Tag == "obs1")
                 {
                     Canvas.SetLeft(x, 500);
                 }
@@ -140,15 +116,23 @@ namespace GameCenter.Projects.FlappyBirdGame
             gameTimer.Start();
         }
 
+        private void KeyIsDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.R && flappyBird.IsGameOver == true) StartGame();
+
+            else flappyBird.BirdUp(e.Key,Bird);
+        }
+
+        private void KeyIsUp(object sender, KeyEventArgs e)
+        {
+            flappyBird.BirdDown(e.Key,Bird);
+        }
+
         private void EndGame()
         {
             gameTimer.Stop();
-            flappyBird.gameOver = true;
-            ScoreText.Content = "Game Over! Press R to try again";
-            if (flappyBird.isNewRecord)
-            {
-                RecordText.Content = $"Record: {flappyBird.record}. New Record Acheived!";
-            } 
+            ScoreText.Content = flappyBird.EndGameText();
         }
     }
 }

@@ -41,13 +41,13 @@ namespace GameCenter.Projects.ToDoList
             if(e.ClickCount == 2)
             {
                 TextBlock ? textBlock = sender as TextBlock;
-                StackPanel ? parent = textBlock.Parent as StackPanel;
-                TextBox ? editTextBox = parent.FindName("editTaskDescription") as TextBox;
+                StackPanel ? parent = textBlock!.Parent as StackPanel;
+                TextBox ? editTextBox = parent!.FindName("editTaskDescription") as TextBox;
                 Button ? btnSave = parent.FindName("btnSave") as Button;
 
-                textBlock.Visibility = Visibility.Collapsed;
-                editTextBox.Visibility = Visibility.Visible;
-                btnSave.Visibility = Visibility.Visible;
+                textBlock!.Visibility = Visibility.Collapsed;
+                editTextBox!.Visibility = Visibility.Visible;
+                btnSave!.Visibility = Visibility.Visible;
                 editTextBox.Text = textBlock.Text;
             }
         }
@@ -73,16 +73,16 @@ namespace GameCenter.Projects.ToDoList
         private void OnSaveEdit(object sender, RoutedEventArgs e)
         {
             Button ? btnSave = sender as Button;
-            StackPanel ? parent = btnSave.Parent as StackPanel;
-            TextBox ? editTextBox = parent.FindName("editTaskDescription") as TextBox;
+            StackPanel ? parent = btnSave!.Parent as StackPanel;
+            TextBox ? editTextBox = parent!.FindName("editTaskDescription") as TextBox;
             TextBlock ? textBlock = parent.FindName("txtTaskDescription") as TextBlock;
-            ToDoTask ? task = editTextBox.DataContext as ToDoTask;
+            ToDoTask ? task = editTextBox!.DataContext as ToDoTask;
 
             btnSave.Visibility = Visibility.Collapsed;
             editTextBox.Visibility = Visibility.Collapsed;
-            textBlock.Visibility = Visibility.Visible;
+            textBlock!.Visibility = Visibility.Visible;
             textBlock.Text = editTextBox.Text;
-            _todoList.UpdateTask(task.Id, editTextBox.Text);   
+            _todoList.UpdateTask(task!.Id, editTextBox.Text);   
         }
 
         private void NewTask(object sender, RoutedEventArgs e)

@@ -20,7 +20,7 @@ namespace GameCenter.Projects
     /// </summary>
     public partial class projectPresentetationPage : Window
     {
-        private Window currentProject;
+        private Window ? currentProject;
         public projectPresentetationPage()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace GameCenter.Projects
         private void ProjectImage_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             Hide();
-            currentProject.ShowDialog();
+            currentProject!.ShowDialog();
             Close();
         }
 

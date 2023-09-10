@@ -7,14 +7,14 @@ namespace GameCenter.Projects.Project1.Models
 {
     class UsersListHandler
     {
-        public List<User> UsersList { get; private set; }
+        public List<User1> UsersList { get; private set; }
 
         public UsersListHandler()
         {
             UsersList = GenerateUsersList();
         }
 
-        public void AddUser(User user)
+        public void AddUser(User1 user)
         {
             UsersList.Add(user);
         }
@@ -25,14 +25,14 @@ namespace GameCenter.Projects.Project1.Models
             SetIds();
         }
 
-        public void UpdateUser(User user)
+        public void UpdateUser(User1 user)
         {
             UsersList[user.Id - 1] = user;
         }
 
         public bool ToggleLogUser(int id)
         {
-            User user = UsersList[id - 1];
+            User1 user = UsersList[id - 1];
             if (user.Status != UserStatusTypes.Freeze.ToString())
             {
                 if (user.Status == UserStatusTypes.Logged_Off.ToString())
@@ -51,7 +51,7 @@ namespace GameCenter.Projects.Project1.Models
 
         public void ToogleFreezeUser(int id)
         {
-            User user = UsersList[id - 1];
+            User1 user = UsersList[id - 1];
             if (user.Status == UserStatusTypes.Freeze.ToString())
             {
                 user.Status = UserStatusTypes.Logged_Off.ToString();
@@ -73,26 +73,26 @@ namespace GameCenter.Projects.Project1.Models
             }
         }
 
-        private List<User> GenerateUsersList()
+        private List<User1> GenerateUsersList()
         {
-            return new List<User>()
+            return new List<User1>()
             {
-                new User(
+                new User1(
                     id: 1,
                     name: "Joe",
                     email: "joe@email.com"
                 ),
-                new User(
+                new User1(
                     id : 2,
                     name : "Bob",
                     email: "bob@email.com"
                 ),
-                new User(
+                new User1(
                     id : 3,
                     name : "Gil",
                     email: "gil@email.com"
                 ),
-                new User(
+                new User1(
                     id : 4,
                     name: "Shosh",
                     email: "shosh@email.com"

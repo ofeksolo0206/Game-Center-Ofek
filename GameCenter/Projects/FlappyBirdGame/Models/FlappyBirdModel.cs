@@ -4,26 +4,68 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media;
 
 namespace GameCenter.Projects.FlappyBirdGame.Models
 {
 
     internal class FlappyBirdModel
     {
-        public double score { get; set; }
-        public double record { get; set; }
-        public int gravity { get; set; }
-        public bool gameOver { get; set; }
-        public Rect birdHitBox { get; set; }
-        public Rect pipeHitBox { get; set; }
+        public double Score { get; set; }
+        public double Record { get; set; }
+        public int Gravity { get; set; }
+        public bool IsGameOver { get; set; }
+        public Rect BirdHitBox { get; set; }
+        public Rect PipeHitBox { get; set; }
 
-        public FlappyBirdModel(double score = 0, double record = 0, bool isNewRecord = false, int gravity = 8, bool gameOver = false)
+        public FlappyBirdModel()
         { 
-            this.score = score;
-            this.record = record;
-            this.isNewRecord = isNewRecord;
-            this.gravity = gravity;
-            this.gameOver = gameOver;
+            Score = 0;
+            Record = 0;
+            Gravity = 8;
+            IsGameOver = false;
+            BirdHitBox = new Rect();
         }
+
+        public void SetBirdPosition(Image bird)
+        {
+            BirdHitBox = new Rect(Canvas.GetLeft(bird), Canvas.GetTop(bird), bird.Width - 30, bird.Height);
+        }
+
+        public bool CheckForNewRecord()
+        {
+            if(Score > Record)
+            {
+                Record = Score;
+            }
+            return true;
+        }
+
+        public string EndGameText()
+        {
+            IsGameOver = true;
+            return "Game Over! Press R to try again";
+        }
+
+        public void BirdUp(Key key,Image bird)
+        {
+            if(key == Key.Space)
+            {
+                bird.RenderTransform = new RotateTransform(-20, bird.Width / 2, bird.Height / 2);
+                Gravity = -8;
+            }
+        }
+
+        public void BirdDown(Key key, Image bird)
+        {
+            if (key == Key.Space)
+            {
+                bird.RenderTransform = new RotateTransform(5, bird.Width / 2, bird.Height / 2);
+                Gravity = 8;
+            }
+        }
+
     }
 }

@@ -24,37 +24,41 @@
             Background="LightBlue"
             >
             <Image
-     x:Name="UserAvatar"
-     Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\man.png"
-     Width="50"
-     Height="50"
-     MouseLeftButtonUp="Avatar_MouseLeftButtonUp"
+                x:Name="UserAvatar"
+                Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\man.png"
+                Width="50"
+                Height="50"
+                MouseLeftButtonUp="Avatar_MouseLeftButtonUp"
+                MouseEnter="Image_MouseEnter"
+                MouseLeave="Image_MouseLeave"
+                
+                
      />
         </Grid>
        
 
         <Label 
-            x:Name="TitleLabel"
-            Content="Game Center" 
-            Grid.Row="0" 
-            Grid.Column="1" 
-            Background="LightBlue"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center"
-            FontFamily="Arial Black"
-            FontSize="40"
+                x:Name="TitleLabel"
+                Content="Game Center" 
+                Grid.Row="0" 
+                Grid.Column="1" 
+                Background="LightBlue"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                FontFamily="Arial Black"
+                FontSize="40"
             />
 
         <Label 
-            x:Name="DateLabel"
-            Content="Date" 
-            Grid.Row="0" 
-            Grid.Column="2" 
-            Background="LightBlue"
-            HorizontalContentAlignment="Center"
-            VerticalContentAlignment="Center" 
-            FontFamily="Arial Black" 
-            FontSize="12"
+                x:Name="DateLabel"
+                Content="Date" 
+                Grid.Row="0" 
+                Grid.Column="2" 
+                Background="LightBlue"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center" 
+                FontFamily="Arial Black" 
+                FontSize="12"
             />
 
         <Grid Grid.Row="1" Grid.ColumnSpan="3" >
@@ -81,15 +85,15 @@
             />
             <Image 
           
-            x:Name="ProjectImage" 
-            Width="275"
-            Height="314"
-            Margin="41,66,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            MouseLeftButtonUp="ProjectImage_MouseLeftButtonUp"
-            MouseEnter="Image_MouseEnter"
-            MouseLeave="Image_MouseLeave"
+                x:Name="ProjectImage" 
+                Width="275"
+                Height="314"
+                Margin="41,66,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                MouseLeftButtonUp="ProjectImage_MouseLeftButtonUp"
+                MouseEnter="Image_MouseEnter"
+                MouseLeave="Image_MouseLeave"
             />
         </Grid>
 

@@ -12,7 +12,6 @@ namespace GameCenter.Projects.FlappyBirdGame.Models
     {
         public double score { get; set; }
         public double record { get; set; }
-        public bool isNewRecord { get; set; }
         public int gravity { get; set; }
         public bool gameOver { get; set; }
         public Rect birdHitBox { get; set; }

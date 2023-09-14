@@ -32,8 +32,6 @@ namespace GameCenter.Projects.MemoryGame.Models
         public bool[] opened = new bool[16];
         public int attempts = 15;
 
-
-        //initializing the buttons array
         public memoryGame(Button[] box, int[] TArray)
         {
 
@@ -45,7 +43,7 @@ namespace GameCenter.Projects.MemoryGame.Models
                 box[i].Content = "";
             }
         }
-        //add image to the clicked button
+
         public StackPanel SetImage(matchIconProf test)
         {
             Image img = new Image();
@@ -57,7 +55,6 @@ namespace GameCenter.Projects.MemoryGame.Models
             return stackPnl;
         }
 
-        //wait for a pair of cards , if there is a pair - check for a match
         public void CheckButton(Button[] box, int index)
         {
             if (counter == 2 || opened[index] || counter == 1 && pressed[0] == index)
@@ -83,7 +80,6 @@ namespace GameCenter.Projects.MemoryGame.Models
             }
         }
 
-        //compare between 2 cards: match = keep them open / unmatch = clear their content
         public bool ButtonCompare(int check1, int check2)
         {
             bool matching;

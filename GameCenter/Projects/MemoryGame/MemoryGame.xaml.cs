@@ -36,7 +36,6 @@ namespace GameCenter.Projects.MemoryGame
             if(currentGame != null)
             {
                 currentGame.pairsCounter = 0;
-                //attemptsText.Text = $"Attempts: 15";
 
                 for (int i = 0; i < 16; i++)
                 {

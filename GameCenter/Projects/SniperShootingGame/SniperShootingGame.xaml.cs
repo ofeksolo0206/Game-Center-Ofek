@@ -46,7 +46,7 @@ namespace GameCenter.Projects.SniperShootingGame
             GameCanvas.Background = gameModel.backgroundImage;
 
             DummyMoveTimer.Tick += DummyMoveTick;
-            DummyMoveTimer.Interval = TimeSpan.FromMilliseconds(random.Next(800,1200));
+            DummyMoveTimer.Interval = TimeSpan.FromMilliseconds(random.Next(800,2000));
             DummyMoveTimer.Start();
 
             showGhostTimer.Tick += GhostAnimation;

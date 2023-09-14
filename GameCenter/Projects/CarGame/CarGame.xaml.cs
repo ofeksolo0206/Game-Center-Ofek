@@ -128,7 +128,6 @@ namespace GameCenter.Projects.CarGame
                    && playerCar.Representation.Margin.Top + collisionBuffer <= obstacle.Representation.Margin.Top + obstacle.Representation.Height - collisionBuffer
                    && playerCar.Representation.Margin.Top + playerCar.Representation.Height - collisionBuffer >= obstacle.Representation.Margin.Top + collisionBuffer)
                 {
-                    // End the game
 
                     (sender as DispatcherTimer)!.Stop();
                     isGameOver = true;

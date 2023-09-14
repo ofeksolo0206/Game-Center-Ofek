@@ -119,7 +119,6 @@ namespace GameCenter.Projects.Tic_tac_toe
         {
             GameModel = new TicTacToeModel();
 
-            // Clear the game board
             foreach (Button button in MainGrid.Children)
             {
                 button.Content = "";

@@ -23,7 +23,7 @@ namespace GameCenter.Projects.CarGame.Models
                 X -= Speed;
             }
 
-            if (RightKeyPressed && X < 800 - Representation.Width) // optional change Application.Current.MainWindow.Width  instead of 800
+            if (RightKeyPressed && X < 800 - Representation.Width) 
             {
                 X += Speed;
             }

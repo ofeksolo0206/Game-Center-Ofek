@@ -62,17 +62,14 @@ namespace GameCenter.Projects.CurrencyConverter
         {
             try
             {
-                //we need to get - the selected currencies by the user
                 string ? fromCurrency = FromCurrencyComboBox.SelectedItem.ToString();
                 string ? toCurrency = ToCurrencyComboBox.SelectedItem.ToString();
-                //we need to get - the amount to convert 
                 double amount;
                 if (string.IsNullOrEmpty(AmountTextBox.Text) || !double.TryParse(AmountTextBox.Text, out amount))
                 {
                     MessageBox.Show("Please enter a valid amount.");
                     return;
                 }
-                //we need  2 values from the dict according to the selected items in the combo boxes
                 double ? convertedAmount = ConvertCurrencyAmount(fromCurrency, toCurrency, amount);
                 if (convertedAmount.HasValue)
                 {

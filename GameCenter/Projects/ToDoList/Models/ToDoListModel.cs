@@ -20,6 +20,11 @@ namespace GameCenter.Projects.ToDoList.Models
             Tasks.Add(task);
         }
 
+        public void RemoveTask(ToDoTask task)
+        {
+            Tasks.Remove(task);
+        }
+
         public void ToggleTaskIsCompleted(int taskId)
         {
             ToDoTask task = Tasks.FirstOrDefault(task => task.Id == taskId);

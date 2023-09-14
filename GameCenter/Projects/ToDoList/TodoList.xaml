@@ -25,13 +25,14 @@
                         <TextBlock Name="txtTaskDescription" Text="{Binding Description}" MouseLeftButtonDown="OnTextBlockMouseLeftButtonDown" Width="300"/>
                         <TextBox Name="editTaskDescription" Width="300" Visibility="Collapsed"/>
                         <Button Content="Save" Name="btnSave" Visibility="Collapsed" Click="OnSaveEdit"/>
+                        <Button Content="Remove" Name="btnRemove" Visibility="Collapsed" Click="OnRemoveTask" Margin="5,0,0,0"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
                   
         </ListBox>
         <StackPanel Orientation="Horizontal">
-            <TextBox Name="txtNewTask" Margin="60,0,25,10" Height="30" Width="520" VerticalAlignment="Bottom" Padding="10,5,0,0" Background="AliceBlue" Text="Enter new task" MouseDoubleClick="NewTask"/>
+            <TextBox Name="txtNewTask" Margin="60,0,25,10" Height="30" Width="520" VerticalAlignment="Bottom" Padding="10,5,0,0" Background="AliceBlue" Text="Enter new task" MouseDoubleClick="EnterNewTask"/>
             <Button Content="Add Task" Margin="0,0,0,10" Height="30" Width="120" VerticalAlignment="Bottom" Click="OnAddTask" RenderTransformOrigin="1.147,0.589" />
         </StackPanel>
         

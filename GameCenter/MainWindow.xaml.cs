@@ -110,8 +110,8 @@ namespace GameCenter
                 "- The Technologies i used this project: C#, .NET.\n\n" +
 
                 "- The application will help you manage your schedule by organizing all tasks in one place.\n" +
-                "- You can edit your tasks, add new or mark as complete your to-do missions.\n" +
-                "- To edit task double click the task, then edit and click the save button.\n" +
+                "- You can edit, delete, add or mark as complete your to-do missions.\n" +
+                "- To edit task double click the task, then edit or remove the task.\n" +
                 "- To create new task double click the 'enter new task' text box on the bottom of the page, then click the save button.\n\n" +
 
                 "- To Start the program click the Image.\n" +

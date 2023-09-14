@@ -25,7 +25,7 @@ namespace GameCenter.Projects.ToDoList.Models
             Tasks.Remove(task);
         }
 
-        public void ToggleTaskIsCompleted(int taskId)
+        public void ToggleTaskIsCompleted(string taskId)
         {
             ToDoTask task = Tasks.FirstOrDefault(task => task.Id == taskId);
             if (task != null)
@@ -35,7 +35,7 @@ namespace GameCenter.Projects.ToDoList.Models
             else throw new Exception("the task with this id didn't found");
         }
 
-        public void UpdateTask(int taskId, string newDescription)
+        public void UpdateTask(string taskId, string newDescription)
         {
             ToDoTask taskToEdit = Tasks.FirstOrDefault(task => task.Id == taskId);
             if (taskToEdit != null)

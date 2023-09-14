@@ -31,8 +31,8 @@ namespace GameCenter.Projects.ToDoList
         private void InitializeTasks()
         {
             _todoList = new ToDoListModel();
-            _todoList.AddNewTask(new ToDoTask(1, "To Do Homework"));
-            _todoList.AddNewTask(new ToDoTask(2, "To Finish the Project"));
+            _todoList.AddNewTask(new ToDoTask("a", "To Do Homework"));
+            _todoList.AddNewTask(new ToDoTask("b", "To Finish the Project"));
             listTasks.ItemsSource = _todoList.Tasks;
 
         }
@@ -66,7 +66,7 @@ namespace GameCenter.Projects.ToDoList
         {
             if (!string.IsNullOrWhiteSpace(txtNewTask.Text))
             {
-                ToDoTask newTask = new ToDoTask(random.Next(0,100000), txtNewTask.Text);
+                ToDoTask newTask = new ToDoTask(DateTime.Now.Ticks.ToString(), txtNewTask.Text);
                 _todoList.AddNewTask(newTask);
                 txtNewTask.Text = "Enter new task";
             }

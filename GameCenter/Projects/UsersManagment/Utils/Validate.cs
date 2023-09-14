@@ -25,17 +25,17 @@ namespace GameCenter.Projects.UsersManagment.Utils
             textBox.BorderBrush = new SolidColorBrush(Colors.Gray);
             return true;
         }
-        public static bool UserName(TextBox box)
+        public static bool UserName(TextBox textBox)
         {
             Regex regex = new(@"^[A-Za-z].{2,15}$");
-            Match match = regex.Match(box.Text);
+            Match match = regex.Match(textBox.Text);
             if (!match.Success)
             {
                 MessageBox.Show("Please enter valid UserName!!!");
-                box.BorderBrush = new SolidColorBrush(Colors.IndianRed);
+                textBox.BorderBrush = new SolidColorBrush(Colors.IndianRed);
                 return false;
             }
-            box.BorderBrush = new SolidColorBrush(Colors.Gray);
+            textBox.BorderBrush = new SolidColorBrush(Colors.Gray);
             return true;
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameCenter.Projects.UsersManagment.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,23 +7,22 @@ using System.Threading.Tasks;
 
 namespace GameCenter.Projects.UsersManagment.Models
 {
-    public class User
+    internal class User
     {
-        public static int count = 0;
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        public string Password { get; set; }
+        public string Status { get; set; }
         public DateTime Created { get; set; }
+        public DateTime? LastLogIn { get; set; }
 
-        public User(string name, string email, string password)
+        public User(int id, string name, string email)
         {
+            Id = id;
             Name = name;
             Email = email;
-            Password = password;
+            Status = UserStatusTypes.Logged_Off.ToString();
             Created = DateTime.Now;
-            count++;
-            Id = count;
         }
     }
 }

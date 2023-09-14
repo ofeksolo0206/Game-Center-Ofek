@@ -8,12 +8,12 @@ namespace GameCenter.Projects.ToDoList
 {
     internal class ToDoTask
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Description { get; set; }
         public bool IsComplete;
         public DateTime CreatedDateTime;
 
-        public ToDoTask(int id, string description)
+        public ToDoTask(string id, string description)
         {
             Id = id;
             Description = description;

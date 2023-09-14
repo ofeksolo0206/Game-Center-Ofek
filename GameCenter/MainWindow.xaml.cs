@@ -14,7 +14,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GameCenter.Projects.FlappyBirdGame;
-using GameCenter.Projects.Project1;
 using GameCenter.Projects.Tic_tac_toe;
 using GameCenter.Projects.ToDoList;
 using GameCenter.Projects.CarGame;
@@ -77,8 +76,7 @@ namespace GameCenter
 
         private void Image1_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-           Project1 project1 = new();
-           // UserManagment project1 = new UserManagment();// (the unfinished project)
+            UserManagment project1 = new UserManagment();
             projectPresentetationPage presentetation = new();
             presentetation.OnStart("Users Managment System", "" +
                 "- This is a Users-Managment Program.\n" +

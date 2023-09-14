@@ -26,6 +26,7 @@ namespace GameCenter.Projects.CarGame
         private Random random;
         private int score;
         private int record;
+        DispatcherTimer gameTimer = new DispatcherTimer();
 
         public CarGame()
         {
@@ -38,14 +39,21 @@ namespace GameCenter.Projects.CarGame
             obstacles = new List<Obstacle>();
             random = new Random();
 
-            DispatcherTimer gameTimer = new DispatcherTimer();
+
             gameTimer.Interval = TimeSpan.FromMilliseconds(10);
             gameTimer.Tick += GameLoop;
             gameTimer.Start();
 
+            this.Closed += CarGame_Closed;
+
         }
 
         public object MessageBoxButtons { get; private set; }
+
+        private void CarGame_Closed(object sender, EventArgs e)
+        {
+            gameTimer.Stop();
+        }
 
         protected override void OnPreviewKeyDown(KeyEventArgs e)
         {

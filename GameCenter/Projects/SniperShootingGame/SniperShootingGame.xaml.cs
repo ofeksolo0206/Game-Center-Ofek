@@ -27,6 +27,13 @@ namespace GameCenter.Projects.SniperShootingGame
         {
             InitializeComponent();
             InitializeGame();
+            this.Closed += SniperShootingGame_Closed;
+        }
+
+        private void SniperShootingGame_Closed(object sender, EventArgs e)
+        {
+            DummyMoveTimer.Stop();
+            showGhostTimer.Stop();
         }
 
         private void InitializeGame()

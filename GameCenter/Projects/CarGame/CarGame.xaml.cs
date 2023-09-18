@@ -31,7 +31,7 @@ namespace GameCenter.Projects.CarGame
         public CarGame()
         {
             InitializeComponent();
-            //backgroundVideo.Source = new Uri("Assets/roadway.mp4", UriKind.Relative);
+            backgroundVideo.Source = new Uri("Assets/roadway.mp4", UriKind.Relative);
             backgroundVideo.Play();
 
 
@@ -53,6 +53,7 @@ namespace GameCenter.Projects.CarGame
         private void CarGame_Closed(object sender, EventArgs e)
         {
             gameTimer.Stop();
+            backgroundVideo.Stop();
         }
 
         protected override void OnPreviewKeyDown(KeyEventArgs e)

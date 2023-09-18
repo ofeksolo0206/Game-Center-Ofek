@@ -72,35 +72,29 @@
             >
 
                 <Image
-Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\TechnologiesIcons\.netIcon.png"
+Source="\Images\TechnologiesIcons\.netIcon.png"
 Width="50"
 Height="50"
 Margin="70,7,0,0"
-MouseLeftButtonUp="Avatar_MouseLeftButtonUp"
 />
                 <Image
-Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\TechnologiesIcons\apiIcon.png"
+Source="\Images\TechnologiesIcons\apiIcon.png"
 Width="50"
 Height="50"
                 Margin="30,7,0,0"
-MouseLeftButtonUp="Avatar_MouseLeftButtonUp"
 />
                 <Image
-Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\TechnologiesIcons\c#Icon.png"
+Source="\Images\TechnologiesIcons\csharp.png"
 Width="50"
 Height="50"
                 Margin="30,7,0,0"
-MouseLeftButtonUp="Avatar_MouseLeftButtonUp"
 />
                 <Image
-Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Images\TechnologiesIcons\jsonIcon.png"
+Source="\Images\TechnologiesIcons\jsonIcon.png"
 Width="50"
 Height="50"
                 Margin="30,7,20,0"
-MouseLeftButtonUp="Avatar_MouseLeftButtonUp"
 />
-
-
             </WrapPanel>
         </Grid>
     </Grid>

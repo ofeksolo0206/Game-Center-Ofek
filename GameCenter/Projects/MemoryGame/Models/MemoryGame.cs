@@ -48,7 +48,7 @@ namespace GameCenter.Projects.MemoryGame.Models
         {
             Image img = new Image();
             StackPanel stackPnl = new StackPanel();
-            img.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\MemoryGame\\Assets\\" + test.ToString() + ".png"));
+            img.Source = new BitmapImage(new Uri("Assets/" + test.ToString() + ".png",UriKind.Relative));
             stackPnl.Orientation = Orientation.Horizontal;
             stackPnl.Margin = new Thickness(1);
             stackPnl.Children.Add(img);

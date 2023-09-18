@@ -17,7 +17,7 @@
     <None Remove="Images\sniperShootingGame.png" />
     <None Remove="Images\TechnologiesIcons\.netIcon.png" />
     <None Remove="Images\TechnologiesIcons\apiIcon.png" />
-    <None Remove="Images\TechnologiesIcons\c#Icon.png" />
+    <None Remove="Images\TechnologiesIcons\cSharp.png" />
     <None Remove="Images\TechnologiesIcons\jsonIcon.png" />
     <None Remove="Images\tic-tac-toe.png" />
     <None Remove="Images\todoList.png" />
@@ -43,13 +43,7 @@
     <None Remove="Projects\SaimonGame\saimon assets\G1.png" />
     <None Remove="Projects\SaimonGame\saimon assets\R1.png" />
     <None Remove="Projects\SaimonGame\saimon assets\Y1.png" />
-    <None Remove="Projects\SniperShootingGame\Assets\background.png" />
-    <None Remove="Projects\SniperShootingGame\Assets\dummy01.png" />
-    <None Remove="Projects\SniperShootingGame\Assets\dummy02.png" />
-    <None Remove="Projects\SniperShootingGame\Assets\dummy03.png" />
-    <None Remove="Projects\SniperShootingGame\Assets\dummy04.png" />
-    <None Remove="Projects\SniperShootingGame\Assets\ghost.png" />
-    <None Remove="Projects\SniperShootingGame\Assets\sniper-aim.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\aim.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -62,9 +56,8 @@
     <Resource Include="Images\ProjectsIcons\tic-tac-toe.png" />
     <Resource Include="Images\TechnologiesIcons\.netIcon.png" />
     <Resource Include="Images\TechnologiesIcons\apiIcon.png" />
-    <Resource Include="Images\TechnologiesIcons\c#Icon.png" />
+    <Resource Include="Images\TechnologiesIcons\csharp.png" />
     <Resource Include="Images\TechnologiesIcons\jsonIcon.png" />
-    <Resource Include="Projects\SniperShootingGame\Assets\background.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -83,7 +76,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Projects\CarGame\Assets\roadway.mp4" />
     <Resource Include="Projects\FlappyBirdGame\Assets\bird.png" />
     <Resource Include="Projects\FlappyBirdGame\Assets\clouds.png" />
     <Resource Include="Projects\FlappyBirdGame\Assets\clouds2.png" />
@@ -105,12 +97,7 @@
     <Resource Include="Projects\SaimonGame\saimon assets\G1.png" />
     <Resource Include="Projects\SaimonGame\saimon assets\R1.png" />
     <Resource Include="Projects\SaimonGame\saimon assets\Y1.png" />
-    <Resource Include="Projects\SniperShootingGame\Assets\dummy01.png" />
-    <Resource Include="Projects\SniperShootingGame\Assets\dummy02.png" />
-    <Resource Include="Projects\SniperShootingGame\Assets\dummy03.png" />
-    <Resource Include="Projects\SniperShootingGame\Assets\dummy04.png" />
-    <Resource Include="Projects\SniperShootingGame\Assets\ghost.png" />
-    <Resource Include="Projects\SniperShootingGame\Assets\sniper-aim.png" />
+    <Resource Include="Projects\SniperShootingGame\Assets\aim.png" />
   </ItemGroup>
 
 </Project>

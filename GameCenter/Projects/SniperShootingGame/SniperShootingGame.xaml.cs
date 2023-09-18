@@ -41,7 +41,7 @@ namespace GameCenter.Projects.SniperShootingGame
             GameCanvas.Focus();
             this.Cursor = Cursors.None;
 
-            scopeImage.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SniperShootingGame\\Assets\\sniper-aim.png"));
+            scopeImage.Source = new BitmapImage(new Uri("Assets/aim.png", UriKind.Relative));
             scopeImage.IsHitTestVisible = false;
             GameCanvas.Background = gameModel.backgroundImage;
 

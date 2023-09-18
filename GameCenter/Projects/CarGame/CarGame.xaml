@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="CarGame" Height="450" Width="800">
     <Grid>
-        <MediaElement x:Name="backgroundVideo" LoadedBehavior="Manual" UnloadedBehavior="Stop" MediaEnded="MediaElement_MediaEnded" MediaFailed="MediaElement_MediaFailed" Stretch="UniformToFill"/>
+        <MediaElement x:Name="backgroundVideo" Source="roadway.mp4" LoadedBehavior="Manual" UnloadedBehavior="Stop" MediaEnded="MediaElement_MediaEnded" MediaFailed="MediaElement_MediaFailed" Stretch="UniformToFill"/>
 
         <Canvas x:Name="gameCanvas">
-            <Image x:Name="playerCarImage" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="60" Source="C:\Users\OFEK SOLOMON\Desktop\GameCenter\GameCenter\Projects\CarGame\Assets\car.png"/>
+            <Image x:Name="playerCarImage" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="60" Source="Assets\car.png"/>
             <TextBlock x:Name="scoreTextBlock" Background="White" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Score: 0" Foreground="Black" FontSize="20" Canvas.Top="10" Canvas.Left="10" />
             <TextBlock x:Name="recordTextBlock" Background="White" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Record: 0" Foreground="Black" FontSize="20" Canvas.Top="40" Canvas.Left="10" />
 

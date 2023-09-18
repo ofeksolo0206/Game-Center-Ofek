@@ -31,7 +31,7 @@ namespace GameCenter.Projects.CarGame
         public CarGame()
         {
             InitializeComponent();
-            backgroundVideo.Source = new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\CarGame\\Assets\\roadway.mp4");
+            //backgroundVideo.Source = new Uri("Assets/roadway.mp4", UriKind.Relative);
             backgroundVideo.Play();
 
 
@@ -92,7 +92,8 @@ namespace GameCenter.Projects.CarGame
             if (random.Next(0, 50) == 1)
             {
                 Image obstacleImage = new Image();
-                obstacleImage.Source = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\CarGame\\Assets\\bomb.png"));
+                var uri1 = new Uri("Assets/bomb.png", UriKind.Relative);
+                obstacleImage.Source = new BitmapImage(uri1);
                 obstacleImage.Width = 50;
                 obstacleImage.Height = 50;
                 Obstacle obstacle = new Obstacle(random.Next(0, (int)Width), 0, 2, obstacleImage);

@@ -69,11 +69,6 @@ namespace GameCenter
             GameText.Content = "Please Pick a Game";
         }
 
-        private void Avatar_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            Close();
-        }
-
         private void Image1_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             UserManagment project1 = new UserManagment();

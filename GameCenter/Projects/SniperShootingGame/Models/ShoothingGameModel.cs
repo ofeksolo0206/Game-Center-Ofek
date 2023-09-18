@@ -32,8 +32,8 @@ namespace GameCenter.Projects.SniperShootingGame.Models
             bottomCount = 0;
             topLocation = new List<int>() { 270, 540, 23, 540, 270, 23 };
             bottomLocation = new List<int>() { 133, 678, 420, 678, 133, 420 };
-            backgroundImage.ImageSource = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SniperShootingGame\\Assets\\background.png"));
-            ghostSprite.ImageSource = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SniperShootingGame\\Assets\\ghost.png"));
+            backgroundImage.ImageSource = new BitmapImage(new Uri("Assets/background.png", UriKind.Relative));
+            ghostSprite.ImageSource = new BitmapImage(new Uri("Assets/ghost.png", UriKind.Relative));
         }
 
         public Rectangle CreateRectangle(int width, int height, ImageBrush image, string tag)
@@ -55,19 +55,19 @@ namespace GameCenter.Projects.SniperShootingGame.Models
             switch (skin)
             {
                 case 1:
-                    dummyBackground.ImageSource = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SniperShootingGame\\Assets\\dummy01.png"));
+                    dummyBackground.ImageSource = new BitmapImage(new Uri("Assets/dummy01.png",UriKind.Relative));
                     break;
 
                 case 2:
-                    dummyBackground.ImageSource = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SniperShootingGame\\Assets\\dummy02.png"));
+                    dummyBackground.ImageSource = new BitmapImage(new Uri("Assets/dummy02.png", UriKind.Relative));
                     break;
 
                 case 3:
-                    dummyBackground.ImageSource = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SniperShootingGame\\Assets\\dummy03.png"));
+                    dummyBackground.ImageSource = new BitmapImage(new Uri("Assets/dummy03.png", UriKind.Relative));
                     break;
 
                 case 4:
-                    dummyBackground.ImageSource = new BitmapImage(new Uri("C:\\Users\\OFEK SOLOMON\\Desktop\\GameCenter\\GameCenter\\Projects\\SniperShootingGame\\Assets\\dummy04.png"));
+                    dummyBackground.ImageSource = new BitmapImage(new Uri("Assets/dummy04.png", UriKind.Relative));
                     break;
             }
 

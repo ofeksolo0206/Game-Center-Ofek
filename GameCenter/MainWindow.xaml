@@ -57,8 +57,8 @@
             <Image x:Name="Image5" Source="\Images\ProjectsIcons\carGame.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image5_MouseLeftButtonUp"/>
             <Image x:Name="Image6" Source="\Images\ProjectsIcons\currencyConvertor.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image6_MouseLeftButtonUp"/>
             <Image x:Name="Image7" Source="\Images\ProjectsIcons\memoryGame.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image7_MouseLeftButtonUp"/>
-            <Image x:Name="Image8" Source="\Images\ProjectsIcons\saimonGame.png" Width="150" Margin="20" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" MouseLeftButtonUp="Image8_MouseLeftButtonUp"/>
 
+            
         </WrapPanel>
 
         <Grid

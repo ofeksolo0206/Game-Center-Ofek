@@ -268,6 +268,5 @@ namespace GameCenter
             ShowDialog();
             presentetion.Close();
             saimonGame.Close();
-        }
     }
 }

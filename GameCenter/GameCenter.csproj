@@ -24,6 +24,7 @@
     <None Remove="Images\userManagement.png" />
     <None Remove="Projects\CarGame\Assets\bomb.png" />
     <None Remove="Projects\CarGame\Assets\car.png" />
+    <None Remove="Projects\CarGame\Assets\roadImage.jpg" />
     <None Remove="Projects\CarGame\Assets\roadway.mp4" />
     <None Remove="Projects\FlappyBirdGame\Assets\bird.png" />
     <None Remove="Projects\FlappyBirdGame\Assets\clouds.png" />
@@ -44,6 +45,17 @@
     <None Remove="Projects\SaimonGame\saimon assets\R1.png" />
     <None Remove="Projects\SaimonGame\saimon assets\Y1.png" />
     <None Remove="Projects\SniperShootingGame\Assets\aim.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\background.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\dummy01.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\dummy02.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\dummy03.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\dummy04.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\ghost.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Projects\CarGame\Assets\roadImage.jpg" />
+    <Resource Include="Projects\SniperShootingGame\Assets\dummy01.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -98,6 +110,11 @@
     <Resource Include="Projects\SaimonGame\saimon assets\R1.png" />
     <Resource Include="Projects\SaimonGame\saimon assets\Y1.png" />
     <Resource Include="Projects\SniperShootingGame\Assets\aim.png" />
+    <Resource Include="Projects\SniperShootingGame\Assets\background.png" />
+    <Resource Include="Projects\SniperShootingGame\Assets\dummy02.png" />
+    <Resource Include="Projects\SniperShootingGame\Assets\dummy03.png" />
+    <Resource Include="Projects\SniperShootingGame\Assets\dummy04.png" />
+    <Resource Include="Projects\SniperShootingGame\Assets\ghost.png" />
   </ItemGroup>
 
 </Project>

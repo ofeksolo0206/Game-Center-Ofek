@@ -28,11 +28,14 @@ namespace GameCenter.Projects.CarGame
         private int record;
         DispatcherTimer gameTimer = new DispatcherTimer();
 
+
+        //<Image Stretch="Fill" Panel.ZIndex="-999" Source="Assets\roadImage.jpg"/>
+
         public CarGame()
         {
             InitializeComponent();
-            backgroundVideo.Source = new Uri("Assets/roadway.mp4", UriKind.Relative);
-            backgroundVideo.Play();
+            //backgroundVideo.Source = new Uri("Assets/roadway.mp4", UriKind.Relative);
+            //backgroundVideo.Play();
 
 
             playerCar = new PlayerCar(200, 300, 2, playerCarImage);

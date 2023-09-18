@@ -20,7 +20,6 @@ using GameCenter.Projects.CarGame;
 using GameCenter.Projects.CurrencyConverter;
 using GameCenter.Projects.MemoryGame;
 using GameCenter.Projects.SaimonGame;
-using GameCenter.Projects.SniperShootingGame;
 using GameCenter.Projects;
 using GameCenter.Projects.UsersManagment;
 
@@ -58,7 +57,6 @@ namespace GameCenter
                 "Image6" => "Currency Convertor Application",
                 "Image7" => "Memory Game",
                 "Image8" => "Saimon Game",
-                "Image9" => "Sniper Shooting Game",
                 _ => "please pick a Game"
             };
         }
@@ -271,32 +269,5 @@ namespace GameCenter
             presentetion.Close();
             saimonGame.Close();
         }
-
-        private void Image9_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            SniperShootingGame sniperShootingGame = new();
-            projectPresentetationPage presentetion = new();
-            presentetion.OnStart("Sniper Shooting Game", "" +
-                "- This is a Sniper Shooting Game. \n" +
-                "- The Technologies i used this project: C#, .Net, Time Dispatcher and the Controls Library.\n\n" +
-
-                "- On this Game you'll test your insticts on a gun range\n" +
-                "- When entering the game a dummies will pop-up randomly on a windows.\n" +
-                "- Every dummy you hit will increase your score, but every dummy you miss will add to your misses count.\n" +
-                "- The game will over when your misses score will reach 10.\n\n" +
-
-                "- To Start the program click the Image.\n" +
-                "- To Return the Home Page click the user's avatar on the header.",
-                Image9.Source,
-                sniperShootingGame
-                );
-            Hide();
-            presentetion.ShowDialog();
-            ShowDialog();
-            presentetion.Close();
-            sniperShootingGame.Close();
-        }
-
-
     }
 }

@@ -8,7 +8,6 @@
         Title="CarGame" Height="450" Width="800">
     <Grid>
         <Image Stretch="Fill" Panel.ZIndex="-999" Source="Assets\roadImage.jpg"/>
-        <MediaElement x:Name="backgroundVideo"  LoadedBehavior="Manual" UnloadedBehavior="Stop" MediaEnded="MediaElement_MediaEnded" MediaFailed="MediaElement_MediaFailed" Stretch="UniformToFill"/>
         <Canvas x:Name="gameCanvas">
             <Image x:Name="playerCarImage" HorizontalAlignment="Left" Height="100"  VerticalAlignment="Top" Width="60" Source="Assets\car.png"/>
             <TextBlock x:Name="scoreTextBlock" Background="White" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Score: 0" Foreground="Black" FontSize="20" Canvas.Top="10" Canvas.Left="10" />

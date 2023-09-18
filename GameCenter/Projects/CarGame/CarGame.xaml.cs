@@ -27,16 +27,9 @@ namespace GameCenter.Projects.CarGame
         private int score;
         private int record;
         DispatcherTimer gameTimer = new DispatcherTimer();
-
-
-        //<Image Stretch="Fill" Panel.ZIndex="-999" Source="Assets\roadImage.jpg"/>
-
         public CarGame()
         {
             InitializeComponent();
-            //backgroundVideo.Source = new Uri("Assets/roadway.mp4", UriKind.Relative);
-            //backgroundVideo.Play();
-
 
             playerCar = new PlayerCar(200, 300, 2, playerCarImage);
             obstacles = new List<Obstacle>();
@@ -56,7 +49,6 @@ namespace GameCenter.Projects.CarGame
         private void CarGame_Closed(object sender, EventArgs e)
         {
             gameTimer.Stop();
-            backgroundVideo.Stop();
         }
 
         protected override void OnPreviewKeyDown(KeyEventArgs e)
@@ -142,7 +134,6 @@ namespace GameCenter.Projects.CarGame
 
             if (isGameOver)
             {
-                backgroundVideo.Stop();
                 playerCar.LeftKeyPressed = false;
                 playerCar.RightKeyPressed = false;
 
@@ -160,7 +151,6 @@ namespace GameCenter.Projects.CarGame
                     playerCar.X = 200;
                     playerCar.Y = 300;
                     (sender as DispatcherTimer)!.Start();
-                    backgroundVideo.Play();
 
                 }
                 if (result == MessageBoxResult.No)
@@ -169,22 +159,6 @@ namespace GameCenter.Projects.CarGame
                 }
 
             }
-
-
         }
-
-
-        private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
-        {
-            backgroundVideo.Position = TimeSpan.Zero;
-            backgroundVideo.Play();
-        }
-
-        private void MediaElement_MediaFailed(object sender, ExceptionRoutedEventArgs e)
-        {
-            MessageBox.Show(e.ErrorException.Message);
-        }
-
-
     }
 }

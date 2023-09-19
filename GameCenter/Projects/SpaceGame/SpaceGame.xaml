@@ -1,0 +1,17 @@
+﻿<Window x:Class="GameCenter.Projects.SpaceGame.SpaceGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameCenter.Projects.SpaceGame"
+        mc:Ignorable="d"
+        Title="SpaceGame" Height="450" Width="800">
+    <Grid>
+        <Image Stretch="Fill" Panel.ZIndex="-999" Source="Assets\space.jpg"/>
+        <Canvas x:Name="gameCanvas">
+            <Image x:Name="playerImage" HorizontalAlignment="Center" Height="78"  VerticalAlignment="Top" Width="78" Source="Assets\spaceship.png"  />
+            <TextBlock x:Name="scoreTextBlock" Background="White" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Score: 0" Foreground="Black" FontSize="20" Canvas.Top="10" Canvas.Left="10" />
+            <TextBlock x:Name="recordTextBlock" Background="White" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Record: 0" Foreground="Black" FontSize="20" Canvas.Top="40" Canvas.Left="10" />
+        </Canvas>
+    </Grid>
+</Window>

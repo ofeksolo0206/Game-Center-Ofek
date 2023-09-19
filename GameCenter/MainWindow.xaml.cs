@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 using GameCenter.Projects.FlappyBirdGame;
 using GameCenter.Projects.Tic_tac_toe;
 using GameCenter.Projects.ToDoList;
-using GameCenter.Projects.CarGame;
+using GameCenter.Projects.SpaceGame;
 using GameCenter.Projects.CurrencyConverter;
 using GameCenter.Projects.MemoryGame;
 using GameCenter.Projects.SaimonGame;
@@ -53,7 +53,7 @@ namespace GameCenter
                 "Image2" => "To Do List Project",
                 "Image3" => "Tic tac toe Game",
                 "Image4" => "Flappy Bird Game",
-                "Image5" => "Car Game",
+                "Image5" => "Space Game",
                 "Image6" => "Currency Convertor Application",
                 "Image7" => "Memory Game",
                 "Image8" => "Saimon Game",
@@ -169,27 +169,27 @@ namespace GameCenter
 
         private void Image5_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            CarGame carGame = new();
+            SpaceGame SpaceGame = new();
             projectPresentetationPage presentetion = new();
-            presentetion.OnStart("Car Game", "" +
-                "- This is a Car avoiding bombs game.\n" +
+            presentetion.OnStart("Space Game", "" +
+                "- This is a Space Game.\n" +
                 "- The Technologies i used this project: C#, .Net, Time Dispatcher and the Controls Library.\n\n" +
 
-                "- Your mission is to avoid all the bombs and reach the highest score.\n" +
-                "- Every Bomb you dodged and got out of the window will add to your score\n" +
-                "- To move the car press the right and left keys on your key board \n" +
-                "- The game will over on the first time you hit a bomb and your score will reset\n\n" +
+                "- You are the pilot and your mission is to avoid all the alians and reach the highest score.\n" +
+                "- Every alian you dodged which got out of the window will add to your score\n" +
+                "- To move the spaceship press the right and left keys on your key board \n" +
+                "- The game will over on the first time you hit an alian and your score will reset\n\n" +
 
                 "- To Start the program click the Image.\n" +
                 "- To Return the Home Page click the user's avatar on the header.",
                 Image5.Source,
-                carGame
+                SpaceGame
                 );
             Hide();
             presentetion.ShowDialog();
             ShowDialog();
             presentetion.Close();
-            carGame.Close();
+            SpaceGame.Close();
         }
 
         private async void Image6_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)

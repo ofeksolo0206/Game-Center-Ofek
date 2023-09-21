@@ -30,6 +30,9 @@ namespace GameCenter.Projects.SpaceGame
         public SpaceGame()
         {
             InitializeComponent();
+            backgroundVideo.Source = new Uri("galaxy.mp4", UriKind.Relative);
+            backgroundVideo.Play();
+
 
             playerCar = new PlayerCar(200, 300, 3, playerImage);
             obstacles = new List<Obstacle>();
@@ -48,6 +51,7 @@ namespace GameCenter.Projects.SpaceGame
 
         private void SpaceGame_Closed(object sender, EventArgs e)
         {
+            backgroundVideo.Stop();
             gameTimer.Stop();
         }
 
@@ -159,6 +163,16 @@ namespace GameCenter.Projects.SpaceGame
                 }
 
             }
+        }
+        private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            backgroundVideo.Position = TimeSpan.Zero;
+            backgroundVideo.Play();
+        }
+
+        private void MediaElement_MediaFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+            MessageBox.Show(e.ErrorException.Message);
         }
     }
 }

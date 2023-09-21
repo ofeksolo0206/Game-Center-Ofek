@@ -24,6 +24,7 @@
     <None Remove="Images\todoList.png" />
     <None Remove="Images\userManagement.png" />
     <None Remove="Projects\SpaceGame\Assets\alian.png" />
+    <None Remove="Projects\SpaceGame\Assets\galaxy.mp4" />
     <None Remove="Projects\SpaceGame\Assets\roadway.mp4" />
     <None Remove="Projects\SpaceGame\Assets\space.jpg" />
     <None Remove="Projects\SpaceGame\Assets\spaceship.png" />
@@ -48,8 +49,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Projects\SpaceGame\Assets\galaxy.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\ProjectsIcons\spaceGame.png" />
-    <Resource Include="Projects\SpaceGame\Assets\alian.png" />
+    <Content Include="Projects\SpaceGame\Assets\alian.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -78,7 +87,9 @@
     <Resource Include="Images\ProjectsIcons\saimonGame.png" />
     <Resource Include="Images\ProjectsIcons\userManagement.png" />
     <Resource Include="Projects\SpaceGame\Assets\spaceship.png" />
-    <Resource Include="Projects\SpaceGame\Assets\space.jpg" />
+    <Resource Include="Projects\SpaceGame\Assets\space.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Projects\FlappyBirdGame\Assets\pipeBottom.png" />
     <Resource Include="Projects\FlappyBirdGame\Assets\pipeTop.png" />
   </ItemGroup>

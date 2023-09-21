@@ -23,6 +23,13 @@
     <None Remove="Images\tic-tac-toe.png" />
     <None Remove="Images\todoList.png" />
     <None Remove="Images\userManagement.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\aim.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\background.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\dummy01.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\dummy02.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\dummy03.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\dummy04.png" />
+    <None Remove="Projects\SniperShootingGame\Assets\ghost.png" />
     <None Remove="Projects\SpaceGame\Assets\alian.png" />
     <None Remove="Projects\SpaceGame\Assets\galaxy.mp4" />
     <None Remove="Projects\SpaceGame\Assets\roadway.mp4" />
@@ -49,6 +56,27 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Projects\SniperShootingGame\Assets\aim.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Projects\SniperShootingGame\Assets\background.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Projects\SniperShootingGame\Assets\dummy01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Projects\SniperShootingGame\Assets\dummy02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Projects\SniperShootingGame\Assets\dummy03.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Projects\SniperShootingGame\Assets\dummy04.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Projects\SniperShootingGame\Assets\ghost.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Projects\SpaceGame\Assets\galaxy.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

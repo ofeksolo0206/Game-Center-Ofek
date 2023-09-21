@@ -22,6 +22,7 @@ using GameCenter.Projects.MemoryGame;
 using GameCenter.Projects.SaimonGame;
 using GameCenter.Projects;
 using GameCenter.Projects.UsersManagment;
+using GameCenter.Projects.SniperShootingGame;
 
 namespace GameCenter
 {
@@ -57,6 +58,7 @@ namespace GameCenter
                 "Image6" => "Currency Convertor Application",
                 "Image7" => "Memory Game",
                 "Image8" => "Saimon Game",
+                "Image9" => "Sniper Shooting Game",
                 _ => "please pick a Game"
             };
         }
@@ -268,6 +270,31 @@ namespace GameCenter
             ShowDialog();
             presentetion.Close();
             saimonGame.Close();
+        }
+
+        private void Image9_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            SniperShootingGame sniperShootingGame = new SniperShootingGame();
+            projectPresentetationPage presentetion = new();
+            presentetion.OnStart("Simon Game", "" +
+                "- This is a Classic Simon Game. \n" +
+                "- The Technologies i used this project: C#, .Net, Task.Delay.\n\n" +
+
+                "- This game will test your memory by remembering a random sequence of colors.\n" +
+                "- To Start the Simon click the Start Game and a press of one of the color will add to the current sequence.\n" +
+                "- When the Simon finishs click the colors by the exact sequence played.\n" +
+                "- If you'll click an different button then the Simon sequence the game will Stop and your score will reset.\n\n" +
+
+                "- To Start the program click the Image.\n" +
+                "- To Return the Home Page click the user's avatar on the header.",
+                Image9.Source,
+                sniperShootingGame
+                );
+            Hide();
+            presentetion.ShowDialog();
+            ShowDialog();
+            presentetion.Close();
+            sniperShootingGame.Close();
         }
     }
 }

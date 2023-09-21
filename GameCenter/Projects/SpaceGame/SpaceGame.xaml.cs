@@ -30,7 +30,7 @@ namespace GameCenter.Projects.SpaceGame
         public SpaceGame()
         {
             InitializeComponent();
-            backgroundVideo.Source = new Uri("galaxy.mp4", UriKind.Relative);
+            backgroundVideo.Source = new Uri("Projects/SpaceGame/Assets/galaxy.mp4", UriKind.Relative);
             backgroundVideo.Play();
 
 
@@ -129,7 +129,7 @@ namespace GameCenter.Projects.SpaceGame
                    && playerCar.Representation.Margin.Top + collisionBuffer <= obstacle.Representation.Margin.Top + obstacle.Representation.Height - collisionBuffer
                    && playerCar.Representation.Margin.Top + playerCar.Representation.Height - collisionBuffer >= obstacle.Representation.Margin.Top + collisionBuffer)
                 {
-
+                    
                     (sender as DispatcherTimer)!.Stop();
                     isGameOver = true;
                     break;
@@ -138,12 +138,14 @@ namespace GameCenter.Projects.SpaceGame
 
             if (isGameOver)
             {
+                backgroundVideo.Stop();
                 playerCar.LeftKeyPressed = false;
                 playerCar.RightKeyPressed = false;
 
                 MessageBoxResult result = MessageBox.Show($"Your Best Score is: {record} \n would you like to play again?", "Game Over", MessageBoxButton.YesNo);
                 if (result == MessageBoxResult.Yes)
                 {
+
                     score = 0;
                     scoreTextBlock.Text = "score: " + score;
                     foreach (var obstacle in obstacles)
@@ -155,7 +157,7 @@ namespace GameCenter.Projects.SpaceGame
                     playerCar.X = 200;
                     playerCar.Y = 300;
                     (sender as DispatcherTimer)!.Start();
-
+                    backgroundVideo.Play();
                 }
                 if (result == MessageBoxResult.No)
                 {

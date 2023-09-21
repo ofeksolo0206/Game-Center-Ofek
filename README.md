@@ -33,6 +33,9 @@ Another game to test your memory. Match pairs of cards with similar images, chal
 #### 8. Simon Game
 Test your memory with our version of the Simon Game! Remember the sequence of lights, and see how far you can go.
 
+### 9. Shooting Range Game
+Enhance your precision and focus with our Shooting Range Game. Aim perfectly to hit the targets and earn maximum points. 
+
 
 
 ## Installation

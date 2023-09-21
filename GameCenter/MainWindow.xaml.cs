@@ -276,14 +276,14 @@ namespace GameCenter
         {
             SniperShootingGame sniperShootingGame = new SniperShootingGame();
             projectPresentetationPage presentetion = new();
-            presentetion.OnStart("Simon Game", "" +
-                "- This is a Classic Simon Game. \n" +
-                "- The Technologies i used this project: C#, .Net, Task.Delay.\n\n" +
+            presentetion.OnStart("Sniper Shooting Game", "" +
+                "- This is a Sniper Shooting Game. \n" +
+                "- The Technologies i used this project: C#, .Net, Time Dispatcher and the Controls Library.\n\n" +
 
-                "- This game will test your memory by remembering a random sequence of colors.\n" +
-                "- To Start the Simon click the Start Game and a press of one of the color will add to the current sequence.\n" +
-                "- When the Simon finishs click the colors by the exact sequence played.\n" +
-                "- If you'll click an different button then the Simon sequence the game will Stop and your score will reset.\n\n" +
+                "- This game will test your insticts on a gun range.\n" +
+                "- When entering the game, dummies will pop-up randomly on the windows.\n" +
+                "- Every Dummy you hit will increase your score, but every dummy you miss will add to your misses count.\n" +
+                "- The game ends when you reach 10 misses.\n\n" +
 
                 "- To Start the program click the Image.\n" +
                 "- To Return the Home Page click the user's avatar on the header.",

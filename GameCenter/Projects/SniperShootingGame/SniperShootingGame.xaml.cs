@@ -17,7 +17,7 @@ namespace GameCenter.Projects.SniperShootingGame
     /// </summary>
     public partial class SniperShootingGame : Window
     {
-        ShoothingGameModel gameModel = new();
+        ShoothingGameModel gameModel = new ShoothingGameModel();
 
         DispatcherTimer DummyMoveTimer = new DispatcherTimer();
         DispatcherTimer showGhostTimer = new DispatcherTimer();
@@ -46,7 +46,7 @@ namespace GameCenter.Projects.SniperShootingGame
             GameCanvas.Background = gameModel.backgroundImage;
 
             DummyMoveTimer.Tick += DummyMoveTick;
-            DummyMoveTimer.Interval = TimeSpan.FromMilliseconds(random.Next(800,2000));
+            DummyMoveTimer.Interval = TimeSpan.FromMilliseconds(random.Next(800, 2000));
             DummyMoveTimer.Start();
 
             showGhostTimer.Tick += GhostAnimation;
@@ -64,7 +64,7 @@ namespace GameCenter.Projects.SniperShootingGame
             Canvas.SetLeft(scopeImage, pX - (scopeImage.Width / 2));
             Canvas.SetTop(scopeImage, pY - (scopeImage.Height / 2));
 
-        } 
+        }
 
         ///showing the ghost when succeed to hit the dummy + update score & misses
         private void GhostAnimation(object? sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace GameCenter.Projects.SniperShootingGame
             {
                 GameCanvas.Children.Remove(y);
             }
-        
+
         }
 
         ///makes a random pair of dummies from top and bottom appears for a random time on the game canvas
@@ -131,7 +131,7 @@ namespace GameCenter.Projects.SniperShootingGame
         ///if the aim click the dummy, remove the dummy from the canvas + add the ghost to the canvas + add 1 to score
         private void ShootDummy(object sender, MouseButtonEventArgs e)
         {
-            if(e.OriginalSource is Rectangle)
+            if (e.OriginalSource is Rectangle)
             {
                 gameModel.ShootDummy((Rectangle)e.OriginalSource, GameCanvas);
             }

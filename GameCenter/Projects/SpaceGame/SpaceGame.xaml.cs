@@ -92,7 +92,7 @@ namespace GameCenter.Projects.SpaceGame
             if (random.Next(0, 50) == 1)
             {
                 Image obstacleImage = new Image();
-                var uri1 = new Uri("Assets/alian.png", UriKind.Relative);
+                var uri1 = new Uri("Assets/alianSpaceship.png", UriKind.Relative);
                 obstacleImage.Source = new BitmapImage(uri1);
                 obstacleImage.Width = 70;
                 obstacleImage.Height = 70;
